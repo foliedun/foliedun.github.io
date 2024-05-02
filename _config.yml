@@ -1,6 +1,6 @@
 title: Foliedun Security Blog
 description: > # this means to ignore newlines until "baseurl:"
-  An amazing blog about information security and penetration testing
+  An amazing blog (mostly) about information security, penetration testing and coding.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://foliedun.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,7 +9,7 @@ url: "https://foliedun.github.io/" # the base hostname & protocol for your site,
 # Author Settings
 author: Foliedun security blog # add your name
 author-img: author_img.jpg # add your photo
-about-author: An amazing blog about information security and penetration testing. # add description
+about-author: An amazing blog (mostly) about information security, penetration testing and coding. # add description
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
 # social-github: artemsheludko # add your Github handle
