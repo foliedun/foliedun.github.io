@@ -1,3 +1,4 @@
 # Welcome to the source-code of Foliedun security blog
 
-Special thanks to the developer of the jekyll theme in use: https://github.com/artemsheludko/flexible-jekyll
+
+Special thanks to artemsheludko, the developer of [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll), the theme in use.
