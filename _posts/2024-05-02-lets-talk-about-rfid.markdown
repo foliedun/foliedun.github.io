@@ -3,9 +3,12 @@ layout: post
 title: Let's talk about RFID
 date: 2024-05-02 12:00:00 +0000
 description: Let's talk about RFID (Radio Frequency Identification) # Add post description (optional)
-img: assets/img/rfid_part1/cover.jpg
+img: rfid_part1/cover.jpg
 fig-caption: # Add figcaption (optional)
 tags: [RFID]
 ---
 
-Soon
+This is the first in a series of posts about RFID, an old passion of mine.
+
+# 1. Introduction
+
