@@ -20,8 +20,7 @@ It's widely present in our daily lives, like in:
 * Inventory control
 * Tracking
 * Anti-theft system
-
-and many others
+* and many others
 
 # 2. Basic system components
 
@@ -31,15 +30,27 @@ RFID systems are generally made up of 4 basic components:
 * Middleware or controller
 * Host software, enterprise software, management software and etc
 
-which will be discussed in more detail below
+![RFID basic system components](rfid_part1/basic_system_components.jpg)
+*RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/*
 
 ## 2.1. Tag or transponder
 
+Tag ou transponder: Uma tag RFID é um pequeno microchip com memória conectado a uma antena ou a outros componentes, sendo a composição exata dependente do tipo da tag, como veremos em “Tipos de tag RFID”. O microchip é responsável por processar requisições advindas do leitor e gerar as respostas com informações contidas na memória. A memória é responsável por armazenar informações relativas a identidade da tag em si como: facility code, site code e card number e, caso possível, outras informações inseridas como: nome do portador, cpf, saldo em dinheiro, número do quarto e etc. A antena é responsável por receber e transmitir sinais de rádio. O cartão em si não possui consciência da composição do seu formato ou conteúdo, nem está ciente de privilégios de acesso para o portador do cartão.
+
 ## 2.2. Reader or interrogator
+
+Reader (leitor), transceiver ou interrogator: O leitor é responsável por interrogar as tags RFID ao seu alcance e requisitar a informação contida em sua memória, sincronizar o processo de comunicação, receber a resposta via radiofrequência e decodificar este sinal analógico em algo digital, para então passar esta informação para o controlador, sem realizar nehuma alteração nos dados durante o processo. Todo leitor possui uma antena e, assim como nas tags, ela é responsável por receber e transmitir sinais de rádio. Existem dois tipos de leitores: apenas-leitura (read-only) e leitura-escrita (read-write). Dispositivos read-only só podem consultar/ler as informações de uma tag. Dispositivos read-write (ou codificadores) podem tanto ler quanto escrever/alterar informações em uma tag (supondo que a escrita/alteração seja possível). O leitor em si não possui consciência da composição do formato ou conteúdo dos dados do cartão, nem está ciente de privilégios de acesso para o portador do cartão.
 
 ## 2.3. Middleware or controller
 
+Access Controller, middleware ou controlador: Middleware é um termo genérico usado para descrever o software que reside entre os leitores e as aplicações empresariais (enterprise software). Desempenha uma função chave em qualquer sistema grande de RFID pois é o responsável por: controlar todo o sistema periférico (tags e leitores); intermediar a comunicação periférico-empresa; abstrair as diferentes tecnologias de diferentes leitores; gerenciar os dados dos sistemas utilizados (ao invés de cada aplicação separadamente); decodificar, formatar, filtrar e compreender o formato dos dados provenientes do leitor; entre outras. Por ser o primeiro dispositivo no sistema RFID no qual o formato dos dados do cartão podem ser decodificados e compreendido (somente o controlador, e possivelmente o host, está ciente desta composição e se os dados recebidos fazem sentido) ele é o responsável por depurar e converter as informações recebidas em algo que o sistema empresarial possa interpretar. Vale ressaltar, entretanto, que nem todas as implementações RFID necessitam de um middleware. Quando o número de solicitações de dados das tags for alto, quando o tráfego destas informações for intenso e quando a alta disponibilidade dos serviços que estão interagindo com o sistema RFID for primordial, então um middleware será necessário.
+
 ## 2.4. Host software
+
+Host software ou enterprise software: É a parte da infraestrutura da empresa, como bases de dados e softwares de gerenciamento (como WMS, SAP, Microsiga), ou seja, onde as informações necessárias para o funcionamento do sistema de RFID são armazenadas, gerenciadas e consultadas pelo controlador.
+
+
+
 
 
 Work in progress
