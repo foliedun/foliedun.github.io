@@ -1,0 +1,45 @@
+---
+layout: post
+title: Let's talk about RFID
+date: 2024-05-02 12:00:00 +0000
+description: Let's talk about RFID # Add post description (optional)
+img: rfid_part1/cover.jpg
+fig-caption: # Add figcaption (optional)
+tags: [RFID]
+---
+
+This is the first in a series of posts about RFID, an old passion of mine.
+
+# 1. Introduction
+
+**R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags.
+
+It's widely present in our daily lives, like in:
+* Access control
+* Contactless payment
+* Inventory control
+* Tracking
+* Anti-theft system
+
+and many others
+
+# 2. Basic system components
+
+RFID systems are generally made up of 4 basic components:
+* Tag or transponder
+* Reader or interrogator
+* Middleware or controller
+* Host software, enterprise software, management software and etc
+
+which will be discussed in more detail below
+
+## 2.1. Tag or transponder
+
+## 2.2. Reader or interrogator
+
+## 2.3. Middleware or controller
+
+## 2.4. Host software
+
+
+Work in progress
