@@ -14,7 +14,7 @@ This is the first in a series of posts about RFID, an old passion of mine.
 
 **R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
-# 2. Infrastructure components
+# 2. General infrastructure and components
 
 RFID infrastructures are generally made up of 4 basic components:
 * Tag or transponder
@@ -25,6 +25,11 @@ RFID infrastructures are generally made up of 4 basic components:
 <!-- ![RFID basic system components](rfid_part1/basic_system_components.jpg) -->
 ![RFID basic system components]({{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg)
 *RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/*
+
+Also, the infrastructures as a whole can be classified by the types of tag and reader in use:
+* Passive Reader Active Tag (PRAT): Based in a passive reader that only receives radio signals from active tags that are battery operated and only transmit.
+* Active Reader Passive Tag (ARPT): Based in a active reader that query passive tags.
+* Active Reader Active Tag (ARAT): Based in a active reader that "wake up" active tags when they enter in its range.
 
 ## 2.1. Tag or transponder
 
