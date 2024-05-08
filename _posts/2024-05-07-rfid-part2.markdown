@@ -3,8 +3,13 @@ layout: post
 title: RFID - types of tags
 date: 2024-05-07 12:00:00 +0000
 description: RFID - types of tags
-img: rfid_part1/cover.jpg
+img: rfid_part1/2024-05-07-rfid-part2_cover.jpg
 fig-caption: # Add figcaption (optional)
 tags: [RFID]
 ---
 
+# 3. Types of tags
+
+RFID tags are divided into three types: active, passive and semi-passive
+
+## 3.1. 
