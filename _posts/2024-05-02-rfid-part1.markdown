@@ -12,15 +12,7 @@ This is the first in a series of posts about RFID, an old passion of mine.
 
 # 1. Introduction
 
-**R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags.
-
-It's widely present in our daily lives, like in:
-* Access control
-* Contactless payment
-* Inventory control
-* Tracking
-* Anti-theft system
-* and many others
+**R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
 # 2. Basic system components
 
@@ -35,7 +27,26 @@ RFID systems are generally made up of 4 basic components:
 
 ## 2.1. Tag or transponder
 
-Tag ou transponder: Uma tag RFID é um pequeno microchip com memória conectado a uma antena ou a outros componentes, sendo a composição exata dependente do tipo da tag, como veremos em “Tipos de tag RFID”. O microchip é responsável por processar requisições advindas do leitor e gerar as respostas com informações contidas na memória. A memória é responsável por armazenar informações relativas a identidade da tag em si como: facility code, site code e card number e, caso possível, outras informações inseridas como: nome do portador, cpf, saldo em dinheiro, número do quarto e etc. A antena é responsável por receber e transmitir sinais de rádio. O cartão em si não possui consciência da composição do seu formato ou conteúdo, nem está ciente de privilégios de acesso para o portador do cartão.
+RFID tags are the end devices used to store data and identify objects attached to it, and their general composition is basically the same:
+* Microchip
+* Memory
+* Antenna
+* Battery (active tags only, more later on)
+* Protective case
+
+O microchip é responsável por processar requisições advindas do leitor e gerar as respostas com informações contidas na memória. A memória é responsável por armazenar informações relativas a identidade da tag em si como: facility code, site code e card number e, caso possível, outras informações inseridas como: nome do portador, cpf, saldo em dinheiro, número do quarto e etc. A antena é responsável por receber e transmitir sinais de rádio. 
+
+The microchip is responsible to process requests from the reader and generate the response with the information stored in the memory.
+
+The memory is responsible to store the information related to the tag itself, like facility code, site code and card number, and if possible, information about the object that is attached to, like onwer name, room number, account balance and etc.
+
+The antenna, usually a coil of wire, is responsible to receive and transmit signal waves, while also generating eletricty to the microchip, a physical process discussed later on.
+
+The battery, when presented, hels to power the microchip and boost the transmission range of the tag.
+
+The protective case, as the name suggests, protect and glue everything together.
+
+A curious fact is that the tag itself is not aware of the composition of its format or content, nor of its access privileges for the cardholder, being responsibility of the other components of the system to ensure it. 
 
 ## 2.2. Reader or interrogator
 
