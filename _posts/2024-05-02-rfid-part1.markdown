@@ -14,27 +14,35 @@ This is the first in a series of posts about RFID, an old passion of mine.
 
 **R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
-# 2. Basic system components
+# 2. Infrastructure components
 
-RFID systems are generally made up of 4 basic components:
+RFID infrastructures are generally made up of 4 basic components:
 * Tag or transponder
 * Reader or interrogator
 * Middleware or controller
-* Host software, enterprise software, management software and etc
+* Management software, host software, enterprise software and etc
 
 ![RFID basic system components](rfid_part1/basic_system_components.jpg)
 *RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/*
 
 ## 2.1. Tag or transponder
 
-RFID tags are the end devices used to store data and identify objects attached to it, and their general composition is basically the same:
+RFID tags are the devices in the end of the chain, the ones closer to the user, and responsible to identify the object/person who possesses it. It's general composition is basically the same:
+
+* Microchip, responsible to process requests from the reader and generate the response with the information from the memory.  
+* Memory, responsible to store the information related to the tag itself, like facility code, site code and card number, and if possible, information about the object that it is attached to, like onwer name, room number, account balance and etc.
+* Antenna, responsible to receive and transmit signal waves, while also generating eletricty to the microchip, a physical process discussed later on.
+* Battery, when present, helps to power the microchip and boost the transmission range of the tag.
+* Protective case, responsible to protect and glue everything together.
+
+The tag itself is not aware of its composition, format or content, nor of its access privileges for the cardholder, being responsibility of the other elements of the system to guarantee and apply it.
+
+<!--
 * Microchip
 * Memory
 * Antenna
 * Battery (active tags only, more later on)
 * Protective case
-
-O microchip é responsável por processar requisições advindas do leitor e gerar as respostas com informações contidas na memória. A memória é responsável por armazenar informações relativas a identidade da tag em si como: facility code, site code e card number e, caso possível, outras informações inseridas como: nome do portador, cpf, saldo em dinheiro, número do quarto e etc. A antena é responsável por receber e transmitir sinais de rádio. 
 
 The microchip is responsible to process requests from the reader and generate the response with the information stored in the memory.
 
@@ -45,23 +53,25 @@ The antenna, usually a coil of wire, is responsible to receive and transmit sign
 The battery, when presented, hels to power the microchip and boost the transmission range of the tag.
 
 The protective case, as the name suggests, protect and glue everything together.
-
-A curious fact is that the tag itself is not aware of the composition of its format or content, nor of its access privileges for the cardholder, being responsibility of the other components of the system to ensure it. 
+--> 
 
 ## 2.2. Reader or interrogator
 
-Reader (leitor), transceiver ou interrogator: O leitor é responsável por interrogar as tags RFID ao seu alcance e requisitar a informação contida em sua memória, sincronizar o processo de comunicação, receber a resposta via radiofrequência e decodificar este sinal analógico em algo digital, para então passar esta informação para o controlador, sem realizar nehuma alteração nos dados durante o processo. Todo leitor possui uma antena e, assim como nas tags, ela é responsável por receber e transmitir sinais de rádio. Existem dois tipos de leitores: apenas-leitura (read-only) e leitura-escrita (read-write). Dispositivos read-only só podem consultar/ler as informações de uma tag. Dispositivos read-write (ou codificadores) podem tanto ler quanto escrever/alterar informações em uma tag (supondo que a escrita/alteração seja possível). O leitor em si não possui consciência da composição do formato ou conteúdo dos dados do cartão, nem está ciente de privilégios de acesso para o portador do cartão.
+The reader is responsible to generate the electromagnetic field that will power up the RFID tags, to interrogate the tags in its range and request the information in tag's memory, to synchronize the communication process, to receive the response via radio frequency and decode this analog signal into digital and then send this digital signal to the middleware.  
+<!-- Reader's antenna is the component that produces the electromagnetic field needed and to generate and receive radio wave signals. -->
+
+Readers are categorized in two types, based in its capabilities: read-only and read-write. As the names suggests, read-only readers are only able to read tag's memory, while read-write readers are able to read and write tag's memory (if the tag supports such feature).
+
+As with tags, the reader itself is not aware of the composition, format, content or access privileges of the tag, being responsibility of the other elements of the system to guarantee and apply it.
 
 ## 2.3. Middleware or controller
 
-Access Controller, middleware ou controlador: Middleware é um termo genérico usado para descrever o software que reside entre os leitores e as aplicações empresariais (enterprise software). Desempenha uma função chave em qualquer sistema grande de RFID pois é o responsável por: controlar todo o sistema periférico (tags e leitores); intermediar a comunicação periférico-empresa; abstrair as diferentes tecnologias de diferentes leitores; gerenciar os dados dos sistemas utilizados (ao invés de cada aplicação separadamente); decodificar, formatar, filtrar e compreender o formato dos dados provenientes do leitor; entre outras. Por ser o primeiro dispositivo no sistema RFID no qual o formato dos dados do cartão podem ser decodificados e compreendido (somente o controlador, e possivelmente o host, está ciente desta composição e se os dados recebidos fazem sentido) ele é o responsável por depurar e converter as informações recebidas em algo que o sistema empresarial possa interpretar. Vale ressaltar, entretanto, que nem todas as implementações RFID necessitam de um middleware. Quando o número de solicitações de dados das tags for alto, quando o tráfego destas informações for intenso e quando a alta disponibilidade dos serviços que estão interagindo com o sistema RFID for primordial, então um middleware será necessário.
+Middleware is a generic term used to describe the software that sits between the reader and the management software. It's a critical component in any medium-to-big RFID infrastructure because it's the responsible for: control all peripheral devices (tags and readers); mediate the communication between peripherals and management software; abstract different technologies from different readers; decode, format, filter and understand the format of data coming from the reader and some others.
 
-## 2.4. Host software
+As the first component in the infrastructure that can decode and understand the data coming, it's the first responsible to check the validity, debug and convert the information received into something that the management software can understand.
 
-Host software ou enterprise software: É a parte da infraestrutura da empresa, como bases de dados e softwares de gerenciamento (como WMS, SAP, Microsiga), ou seja, onde as informações necessárias para o funcionamento do sistema de RFID são armazenadas, gerenciadas e consultadas pelo controlador.
+It is worth noting, however, that not all RFID implementations would require a middleware. When the number of tags read are high, when the traffic of information is intense or when the high availability of the services that are interacting with the RFID system is essential, then a middleware is desired.
 
+## 2.4. Management software
 
-
-
-
-Work in progress
+The management software can be considered the backend of the RFID infrastructure, like databases, management software (WMS, SAP, Microsiga) and others. It's where the required information to the whole system is stored, managed and queried by the middleware.
