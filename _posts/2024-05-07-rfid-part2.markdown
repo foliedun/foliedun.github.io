@@ -24,7 +24,7 @@ Being the energy support and the communication frequency the most used ones.
 Active tags have an internal energy source, like a battery, that powers on the microchip and an active transmitter, due to this, this kind of tag can have more memory capacity and the ability to generate it's own signal to transfer data, being able to be detected and transmit to really long distances, of up to 100m. They can also be divided in two subgroups:
 
 * Transponder: remains inactive and "awakes" when detects the radio signal of a reader, transmitting the response as soon as are awake.
-* Beacon: is always awake, emitting signals at predefined intervals.
+* Beacon: always awake, emitting signals at predefined intervals.
 
 ![Active tag]({{site.baseurl}}/assets/img/rfid_part2/active_tag.png)
 *Active tag - Source: https://learn.sparkfun.com/tutorials/rfid-basics/all*
