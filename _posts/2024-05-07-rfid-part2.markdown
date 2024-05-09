@@ -10,6 +10,16 @@ tags: [RFID]
 
 # 3. Types of tags
 
-RFID tags are divided into three types: active, passive and semi-passive
+RFID tags can be categorized by their energy support, by their memory type or by their communication frequency.
+Tags can be divided into three types: active, passive and semi-passive.
+
+RFID tags can be categorized in many ways:
+* by their energy support: active, passive or semi-passive.
+* by their memory type: read-write, read-only or write once read many (WORM)
+* by their communication frequency: Low Frequency, High Frequency or Ultra High Frequency
+
+Being the energy support and the communication frequency the most used ones.
+
+*Source: https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized*
 
 ## 3.1. 
