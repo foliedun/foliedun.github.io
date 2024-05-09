@@ -62,4 +62,3 @@ Write-once read-many (WORM): THe memory can only be written once. WORM memories 
 
 ![Communication frequencies]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
 *Communication frequencies example - Source: https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized*
-
