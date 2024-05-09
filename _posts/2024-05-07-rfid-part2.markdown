@@ -3,23 +3,63 @@ layout: post
 title: RFID - types of tags
 date: 2024-05-07 12:00:00 +0000
 description: RFID - types of tags
-img: rfid_part1/2024-05-07-rfid-part2_cover.jpg
+img: rfid_part2/cover.jpg
 fig-caption: # Add figcaption (optional)
 tags: [RFID]
 ---
 
 # 3. Types of tags
 
-RFID tags can be categorized by their energy support, by their memory type or by their communication frequency.
-Tags can be divided into three types: active, passive and semi-passive.
-
 RFID tags can be categorized in many ways:
 * by their energy support: active, passive or semi-passive.
-* by their memory type: read-write, read-only or write once read many (WORM)
+* by their memory type: read-write, read-only or write-once read-many (WORM)
 * by their communication frequency: Low Frequency, High Frequency or Ultra High Frequency
 
 Being the energy support and the communication frequency the most used ones.
 
-*Source: https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized*
+## 3.1. Energy support
 
-## 3.1. 
+### 3.1.1. Active tags
+
+Active tags have an internal energy source, like a battery, that powers on the microchip and an active transmitter, due to this, this kind of tag can have more memory capacity and the ability to generate it's own signal to transfer data, being able to be detected and transmit to really long distances, of up to 100m. They can also be divided in two subgroups:
+
+* Transponder: remains inactive and "awakes" when detects the radio signal of a reader, transmitting the response as soon as are awake.
+* Beacon: is always awake, emitting signals at predefined intervals.
+
+![Active tag]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
+*Active tag - Source: https://learn.sparkfun.com/tutorials/rfid-basics/all*
+
+### 3.1.2. Passive tags
+
+Passive tags don't have an internal energy souce nor an active transmitter, so they have to use the electromagnetic field created by the reader to generate electricity to power on the microchip and to transmit the response back to the reader, a physical process that will be discussed later. Due to this they have a smaller memory capacity and a really small working distance.
+
+Due to the very low production cost, passive tags are the most found on the market and the most implemented in projects, therefore, more emphasis will be placed on them.
+Devido ao baixíssimo custo de produção, tags passivas são as mais encontradas no mercado e as mais implementadas em projetos, sendo assim, dará-se ênfase a elas.
+Tags passivas são mais baratas devido aos componentes necessários para sua fabricação. De um modo geral, este tipo só precisa de uma antena, geralmente feita de cobre, um microchip e um substrato, geralmente PVC ou plástico, para proteção. Na imagem abaixo podemos ver uma tag RFID passiva no formato de cartão.
+
+![Passive tag]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
+*PAssive tag - Source: https://learn.sparkfun.com/tutorials/rfid-basics/all*
+
+### 3.1.3. Semi-passive tags
+
+Semi-passive tags, or Battery-Assisted Passive (BAP) tags, are a hybrid between active and passive tags. They have their own energy source that powers up the microchip and assists in the communication, but don't have an active transmitter, and due to this, they need the electromagnetic field created by the reader to transmit the response back. As the battery powers the microchip, they can have bigger memories and don't need to extract energy from reader's field, which allows them to respond to weaker signals and to work with longer distances than the passive tags.
+
+![Semi-passive tag]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
+*Semi-passive tag - Source: https://www.researchgate.net/figure/A-typical-semi-passive-tag-with-an-internal-battery-116_fig3_339643122*
+
+## 3.2. Memory type
+
+* Read-only (RO): The memory can only be read and the data in it is created during its manufacturing
+* Read-write (RW): The memory can be written and rewritten as many times as necessary. RW memories also have a RO space where some information about the tag is stored.
+* Write-once read-many (WORM): THe memory can only be written once. WORM memories also have a RO space where some information about the tag is stored.
+
+## 3.3. Communication frequency
+
+
+
+
+
+
+![Communication frequencies]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
+*Communication frequencies example - Source: https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized*
+
