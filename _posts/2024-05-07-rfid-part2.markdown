@@ -55,10 +55,22 @@ Write-once read-many (WORM): THe memory can only be written once. WORM memories 
 
 ## 3.3. Communication frequency
 
-
-
-
-
+As said before, RFID communicates through radio waves and, one of the properties of electromagnetic waves, is frequency. Frequency, as a whoel, refers to the number of occurrences of an event in a given period of time, in our case, frequency is the number of oscillations per second of the radio wave. Thus, passive tags operate mainly in three frequency bands: Low Frequency (LF), High Frequency (HF) or Ultra High Frequency (UHF).
 
 ![Communication frequencies]({{site.baseurl}}/assets/img/rfid_part2/frequency.jpg)
 *Communication frequencies example - Source: https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized*
+
+### 3.3.1. Low Frequency 
+
+Operates mainly in the bands between 125 kHz to 134.2 kHz and 140 kHz to 148.5 kHz, being 125 kHz the most common. Provides a short reading range, about 10 cm, and a slow reading speed, about 1 kbits/s, but is very resistant to interference, from metals and liquids for example.
+
+### 3.3.2. High Frequency
+
+Operates mainly in the band of 13.56 MHz. Provides a medium reading range, between 10 cm and 1 m, and an intermediate reading speed, about 25 kbits/s, but suffers more interference then the low frequency.
+
+The so famous NFC tecnology (Near-Field Communication), present in public transportation, contactless payments and smartphones, operates in this frequency, and this is not just a coincidence, NFC standards and protocols are based in the RFID standards, such as ISO/IEC 14443.
+
+### 3.3.3. Ultra High Frequency
+
+Operates mainly in the bands between 856 MHz to 960 MHz. Provides a long reading range, about 10 m, and a fast reading speed, about 100 kbits/s, but suffers a lot with interference.
+
