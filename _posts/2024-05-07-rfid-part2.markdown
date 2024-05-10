@@ -62,15 +62,17 @@ As said before, RFID communicates through radio waves and, one of the properties
 
 ### 3.3.1. Low Frequency 
 
-Operates mainly in the bands between 125 kHz to 134.2 kHz and 140 kHz to 148.5 kHz, being 125 kHz the most common. Provides a short reading range, about 10 cm, and a slow reading speed, about 1 kbits/s, but is very resistant to interference, from metals and liquids for example.
+Operates mainly in bands between 125 kHz to 134 kHz. Provides a short reading range, up to 10 cm, and a slow reading speed, but is very resistant to interference, from metals and liquids for example.
 
 ### 3.3.2. High Frequency
 
-Operates mainly in the band of 13.56 MHz. Provides a medium reading range, between 10 cm and 1 m, and an intermediate reading speed, about 25 kbits/s, but suffers more interference then the low frequency.
+Operates mainly in the band of 13.56 MHz. Provides a medium reading range, up to 1 m, and an intermediate reading speed, but suffers more interference then the low frequency.
 
 The so famous NFC tecnology (Near-Field Communication), present in public transportation, contactless payments and smartphones, operates in this frequency, and this is not just a coincidence, NFC standards and protocols are based in the RFID standards, such as ISO/IEC 14443.
 
 ### 3.3.3. Ultra High Frequency
 
-Operates mainly in the bands between 856 MHz to 960 MHz. Provides a long reading range, about 10 m, and a fast reading speed, about 100 kbits/s, but suffers a lot with interference.
+Operates mainly in the bands between 856 MHz to 960 MHz. Provides a long reading range, up to 10 m, and a fast reading speed, but suffers a lot with interference.
+
+
 
