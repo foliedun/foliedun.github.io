@@ -1,0 +1,12 @@
+---
+layout: post
+title: RFID - types of tags
+date: 2024-05-11 12:00:00 +0000
+description: RFID - Coupling methods
+img: rfid_part2/cover.jpg
+fig-caption: # Add figcaption (optional)
+tags: [RFID]
+---
+
+# 4. Coupling methods
+
