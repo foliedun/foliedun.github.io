@@ -8,5 +8,16 @@ fig-caption: # Add figcaption (optional)
 tags: [RFID]
 ---
 
-# 4. Coupling methods
+Understanding how RFID communicates is an interesting knowledge for those who want to implement it, for such, we will need to dive into some physical principles, such as electricity and magnetism.
 
+# 4. RFID coupling mechanisms
+
+For the tag and reader to communicate, their circuits need to couple, to pair. In physics, two objects are coupled when they interact with each other, so, in the RFID context, coupling happens when there is a transfer of energy and/or data between tag and reader. This process is known as **RFID coupling mechanism**.
+
+The main coupling mechanisms used are: backscatter/backscattering coupling, capacitive coupling and inductive coupling. Sometimes the terms "magnetic coupling" or "electromagnetic coupling" can be seen, however, those terms refers to any coupling that happens using the electromagnetic field of reader and tag
+
+
+Por vezes pode-se ver também o termo magnetic coupling ou electromagnetic coupling (acoplamento eletromagnético), entretanto, este termo refere-se a qualquer acoplamento que ocorre utilizando o campo eletromagnético da tag e do reader, assim como ocorre no inductive coupling, sendo este o método de emparelhamento mais utilizado.
+
+
+https://www.atlasrfidstore.com/product_images/uploaded_images/coupling-graphics-1-.jpg
