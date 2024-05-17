@@ -34,4 +34,15 @@ To allow the transmission and reception of signals at the same time, a direction
 
 Due to the characteristics of backscattering, the radio waves emitted can travel far beoynd the tag or reader, allowing it to operate over long distances and being widely used in RFID systems with ultra high frequency (UHF) tags.
 
+## 4.2. Capacitive coupling
+
+
+
+
+
+
+## 4.3. Inductive coupling
+
+
+
 
