@@ -14,22 +14,24 @@ Understanding how RFID communicates is an interesting knowledge for those who wa
 
 For the tag and reader to communicate, their circuits need to couple, to pair. In physics, two objects are coupled when they interact with each other, so, in the RFID context, coupling happens when there is a transfer of energy and/or data between tag and reader. This process is known as **RFID coupling mechanism**.
 
-The main coupling mechanisms used are: backscatter coupling or backscattering, capacitive coupling and inductive coupling. Sometimes the terms "magnetic coupling" or "electromagnetic coupling" can be seen, however, those terms refers to any coupling that happens using the electromagnetic field of reader and tag. The coupling mechanisms affects various aspects of the RFID communication, such as reading range, required frequency, hardware needs and etc. For example, low frequency and high frequency are mainly used with inductive and capacitive coupling, while ultra-high frequency is more used with the backscatter coupling.
+The main coupling mechanisms used are: backscatter coupling or backscattering, capacitive coupling and inductive coupling. Sometimes the terms "magnetic coupling" or "electromagnetic coupling" can be seen, however, those terms refers to any coupling that happens using the electromagnetic field of reader and tag. The coupling mechanisms affects various aspects of the RFID communication, such as reading range, required frequency, hardware needs and etc. For example, low frequency (LF) and high frequency (HF) are mainly used with inductive and capacitive coupling, while ultra high frequency (UHF) is more used with the backscatter coupling.
 
 ![Coupling mechanisms]({{site.baseurl}}/assets/img/rfid_part3/coupling_mechanisms.jpg)
 *coupling mechanisms - Source: https://www.atlasrfidstore.com/product_images/uploaded_images/coupling-graphics-1-.jpg*
 
-## 4.1. Backscatter coupling or Backscattering
+## 4.1. Backscatter coupling or backscattering
 
 In physics, backscattering is the reflection of waves, particles or signals back to the direction of the source, in other words, it's a type of dispersion (scattering) in which the angle of reflection is around 180 degrees. <!-- It's considered a diffuse reflection due to its dispersion. -->
 
 It happens because most objects with dimensions greater than half of the wavelength of the incident electromagnetic wave are capable of reflecting part of this wave back to the emitter. In this sense, the backscattering found in RFID is quite similiar to the ones used in radars, for example.
 
-Back to RFID, in this coupling method the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below shows part of this behaviour.
+Back to RFID, in this coupling method the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below exemplifies this behaviour.
 
 ![Backscattering]({{site.baseurl}}/assets/img/rfid_part3/backscattering_example.png)
 *Backscattering - Source: https://www.researchgate.net/figure/RFID-system-operation-The-backscattered-signal-is-modulated-by-changes-in-chip-impedance_fig1_3018375*
 
+To allow the transmission and reception of signals at the same time, a directional coupler is often needed to allow the received signal to be separated from the transmitted one. The reader also needs to be able to detect the modulation used by the tag in the presense of many other backscatterings.
 
+Due to the characteristics of backscattering, the radio waves emitted can travel far beoynd the tag or reader, allowing it to operate over long distances and being widely used in RFID systems with ultra high frequency (UHF) tags.
 
 
