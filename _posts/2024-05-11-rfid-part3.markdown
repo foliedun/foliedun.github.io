@@ -16,4 +16,8 @@ For the tag and reader to communicate, their circuits need to couple, to pair. I
 
 The main coupling mechanisms used are: backscatter/backscattering coupling, capacitive coupling and inductive coupling. Sometimes the terms "magnetic coupling" or "electromagnetic coupling" can be seen, however, those terms refers to any coupling that happens using the electromagnetic field of reader and tag. The coupling mechanisms affects various aspects of the RFID communication, such as reading range, required frequency, hardware needs and etc. For example, low frequency and high frequency are mainly used with inductive and capacitive coupling, while ultra-high frequency is more used with the backscatter coupling.
 
-https://www.atlasrfidstore.com/product_images/uploaded_images/coupling-graphics-1-.jpg
+![Coupling mechanisms]({{site.baseurl}}/assets/img/rfid_part3/coupling_mechanisms.png)
+*coupling mechanisms - Source: https://www.atlasrfidstore.com/product_images/uploaded_images/coupling-graphics-1-.jpg*
+
+## 4.1. Backscatter coupling ou Backscattering
+
