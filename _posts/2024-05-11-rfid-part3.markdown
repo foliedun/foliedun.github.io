@@ -21,9 +21,7 @@ The main coupling mechanisms used are: backscatter coupling or backscattering, c
 
 ## 4.1. Backscatter coupling or backscattering
 
-In physics, backscattering is the reflection of waves, particles or signals back to the direction of the source, in other words, it's a type of dispersion (scattering) in which the angle of reflection is around 180 degrees. <!-- It's considered a diffuse reflection due to its dispersion. -->
-
-It happens because most objects with dimensions greater than half of the wavelength of the incident electromagnetic wave are capable of reflecting part of this wave back to the emitter. In this sense, the backscattering found in RFID is quite similiar to the ones used in radars, for example.
+In physics, backscattering is the reflection of waves, particles or signals back to the direction of the source, in other words, it's a type of dispersion (scattering) in which the angle of reflection is around 180 degrees. <!-- It's considered a diffuse reflection due to its dispersion. -->It happens because most objects with dimensions greater than half of the wavelength of the incident electromagnetic wave are capable of reflecting part of this wave back to the emitter. In this sense, the backscattering found in RFID is quite similiar to the ones used in radars, for example.
 
 Back to RFID, in this coupling mechanism the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below exemplifies this behaviour.
 
@@ -37,6 +35,14 @@ Due to the characteristics of backscattering, the radio waves emitted can travel
 ## 4.2. Capacitive coupling
 
 Capacitive coupling, also known as electric coupling, uses the concept of capacitors and capacitance to couple tag and reader, but what is capacitors and capacitance?
+
+In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, usually two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge; for example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other plate will become more positively charged (Q⁺); and from this potential difference an electric field is created between the two plates. 
+
+This way, capacitors have as main function to store the electrical potential energy that is established between their conductors in the form of an electric field, being so good at it that the potential difference between its conductos remains for a certain time even if there is no electrical supply.
+
+Na físca, um capacitor, ou condensador, é um objeto que consiste de dois condutores elétricos (conhecidos como placas ou armaduras) isolados entre si por um material não-condutor (conhecido como dielétrico). Quando em funcionamento cada placa acumulará um tipo de carga elétrica, ou seja, a placa-A acumulará carga positiva (Q⁺) enquanto a placa-B acumulará carga negativa (Q⁻). Desta diferença de potencial surge um campo elétrico entre as duas placas. Assim, capacitores tem como principal função armazenar a carga e a energia potencial elétrica que se estabelece entre seus condutores na forma de um campo elétrico. O interessante é que esta carga permanece durante certo tempo mesmo que não haja alimentação elétrica.
+
+Já a capacitância é a habilidade de um corpo em armazenar energia elétrica. Também é um termo que se refere a quantidade de energia elétrica que um capacitor pode armazenar. Quanto maior a capacitância maior será a quantidade de energia que pode ser armazenada.
 
 
 
