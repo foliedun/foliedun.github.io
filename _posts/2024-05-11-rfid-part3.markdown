@@ -25,7 +25,7 @@ In physics, backscattering is the reflection of waves, particles or signals back
 
 It happens because most objects with dimensions greater than half of the wavelength of the incident electromagnetic wave are capable of reflecting part of this wave back to the emitter. In this sense, the backscattering found in RFID is quite similiar to the ones used in radars, for example.
 
-Back to RFID, in this coupling method the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below exemplifies this behaviour.
+Back to RFID, in this coupling mechanism the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below exemplifies this behaviour.
 
 ![Backscattering]({{site.baseurl}}/assets/img/rfid_part3/backscattering_example.png)
 *Backscattering - Source: https://www.researchgate.net/figure/RFID-system-operation-The-backscattered-signal-is-modulated-by-changes-in-chip-impedance_fig1_3018375*
@@ -35,6 +35,9 @@ To allow the transmission and reception of signals at the same time, a direction
 Due to the characteristics of backscattering, the radio waves emitted can travel far beoynd the tag or reader, allowing it to operate over long distances and being widely used in RFID systems with ultra high frequency (UHF) tags.
 
 ## 4.2. Capacitive coupling
+
+Capacitive coupling, also known as electric coupling, uses the concept of capacitors and capacitance to couple tag and reader, but what is capacitors and capacitance?
+
 
 
 
