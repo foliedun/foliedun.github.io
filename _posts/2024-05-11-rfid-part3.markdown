@@ -36,21 +36,25 @@ Due to the characteristics of backscattering, the radio waves emitted can travel
 
 Capacitive coupling, also known as electric coupling, uses the concept of capacitors and capacitance to couple tag and reader, but what is capacitors and capacitance?
 
-In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, usually two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge and from this potential difference an electric field is created between the plates. For example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other will become more positively charged (Q⁺), from this difference an electric field is created between the plates.
-
+In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, like two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge and from this potential difference an electric field is created between the plates. For example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other will become more positively charged (Q⁺), from this difference an electric field is created between the plates.
 
 ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor1.png)  ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor2.png)
 *Capacitor - Source: http://3.bp.blogspot.com/-tFQ9uwbN6TA/UdI1j52MBTI/AAAAAAAAB9E/7WfSXnY8YQ0/* *Capacitor - Source: https://sites.ifi.unicamp.br/f328/files/2013/10/Aula-05-F328-2S-2013.pdf*
 
-<!-- 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+<!--
+      Capacitor       |      Capacitor
+:--------------------:|:---------------------:
+![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor1.png)  |  ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor2.png)
+*Capacitor - Source: http://3.bp.blogspot.com/-tFQ9uwbN6TA/UdI1j52MBTI/AAAAAAAAB9E/7WfSXnY8YQ0/*  |  *Capacitor - Source: https://sites.ifi.unicamp.br/f328/files/2013/10/Aula-05-F328-2S-2013.pdf*
 -->
 
-This way, capacitors have as main function to store the electrical potential energy that is established between their conductors in the form of an electric field, being so good at it that the potential difference between its conductos remains for a certain time even if there is no electrical supply.
+This way, capacitors have as main function to store the potential energy that is established between their conductors in the form of an electric field, and being so good at it that the potential difference remains for a short period of time even after the power supply is cut off.
 
-Já a capacitância é a habilidade de um corpo em armazenar energia elétrica. Também é um termo que se refere a quantidade de energia elétrica que um capacitor pode armazenar. Quanto maior a capacitância maior será a quantidade de energia que pode ser armazenada.
+![Capacitors]({{site.baseurl}}/assets/img/rfid_part3/capacitors.jpg)
+*Example of commercial capacitors - Source: https://en.wikipedia.org/wiki/Capacitor*
+
+Capacitance is the ability of an object to store electrical energy, in other words, it measures the amount of electrical energy that can be stored in a capacitor for a given electrical potential difference. The greater the capacitance, the greater the amount of energy that can be stored.
+
 
 
 
