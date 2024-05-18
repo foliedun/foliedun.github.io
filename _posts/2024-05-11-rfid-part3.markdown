@@ -36,8 +36,11 @@ Due to the characteristics of backscattering, the radio waves emitted can travel
 
 Capacitive coupling, also known as electric coupling, uses the concept of capacitors and capacitance to couple tag and reader, but what is capacitors and capacitance?
 
-In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, usually two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge; for example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other plate will become more positively charged (Q⁺); and from this potential difference an electric field is created between the two plates. 
+In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, usually two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge and from this potential difference an electric field is created between the plates. For example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other will become more positively charged (Q⁺), from this difference an electric field is created between the plates.
 
+
+![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor1.png)  ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor2.png)
+*Capacitor - Source: http://3.bp.blogspot.com/-tFQ9uwbN6TA/UdI1j52MBTI/AAAAAAAAB9E/7WfSXnY8YQ0/* *Capacitor - Source: https://sites.ifi.unicamp.br/f328/files/2013/10/Aula-05-F328-2S-2013.pdf*
 
 <!-- 
 Solarized dark             |  Solarized Ocean
