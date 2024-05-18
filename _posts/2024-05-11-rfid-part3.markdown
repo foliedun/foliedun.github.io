@@ -4,7 +4,7 @@ title: RFID - types of tags
 date: 2024-05-11 12:00:00 +0000
 description: RFID - Coupling methods
 img: rfid_part3/cover.png
-fig-caption: Source: https://www.researchgate.net/figure/Magnetic-coupling-between-an-RFID-reader-and-transponder_fig1_351466626   # Add figcaption (optional)
+fig-caption: Source - https://www.researchgate.net/figure/Magnetic-coupling-between-an-RFID-reader-and-transponder_fig1_351466626   # Add figcaption (optional)
 tags: [RFID]
 ---
 
