@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RFID coupling mechanisms
-subtitle: A physical approach 
+subtitle: A physics approach 
 date: 2024-05-11 12:00:00 +0000
 description: RFID - Coupling mechanisms
 img: rfid_part3/cover.png
@@ -9,7 +9,7 @@ fig-caption: Source - https://www.researchgate.net/figure/Magnetic-coupling-betw
 tags: [RFID]
 ---
 
-Understanding how RFID communicates is an interesting knowledge for those who want to implement it, for such, we will need to dive into some physical principles, such as electricity and magnetism.
+Understanding how RFID communicates is an interesting knowledge for those who want to implement it, for such, we will need to dive into some physics principles, such as electricity and magnetism.
 
 # 4. RFID coupling mechanisms
 
@@ -22,7 +22,7 @@ The main coupling mechanisms used are: backscatter coupling or backscattering, c
 
 ## 4.1. Inductive coupling
 
-Inductive coupling is based on the physical concept of electromagnetic/magnetic induction. In the reader, the flow of an alternating current in the antenna generates an alternating magnetic field nearby, due to this, if a tag is positioned inside this magnetic field, an alternating current will be induced in tag's antenna and thus generating the electrical energy needed to power up its microchip.
+Inductive coupling is based on the physics concept of electromagnetic/magnetic induction. In the reader, the flow of an alternating current in the antenna generates an alternating magnetic field nearby, due to this, if a tag is positioned inside this magnetic field, an alternating current will be induced in tag's antenna and thus generating the electrical energy needed to power up its microchip.
 
 ![Electromagnetic induction]({{site.baseurl}}/assets/img/rfid_part3/electromagnetic_induction.png)
 *Electromagnetic induction - Source: https://www.electricityforum.com/electromagnetic-induction*
