@@ -12,19 +12,30 @@ tags: [RFID]
 
 As seen before, RFID uses electromagnetic waves as a means of communication in the physical world. This way, for the exchange of information to occur, it's necessary that the data in digital format (zeros and ones) be transformed into analog format (electromagnetic waves), in other words, we need a way to "insert" those bits into the electromagnetic waves, so they can be emitted and received by tag and reader antennas. This process is known as **digital modulation**, or simply **modulation**. 
 
-The manipulated electromagnetic wave is called **carrier wave**, while the reverse process of extracting the original information from this wave is known as **demodulation**.
+The electromagnetic wave used is called **carrier wave**, while the reverse process of extracting the original information from this wave is known as **demodulation**.
 
 There are three basic modulation techniques, all of them manipulating one of the three basic characteristics of waves: amplitude, frequency or phase. All other modulation methods are derived from these three basic methods. 
 
 ## 5.1. Amplitude Shift Keying (ASK)
 
 
+![Amplitude Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/ask2.png)
+*Amplitude Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
 ## 5.2. Frequency Shift Keying (FSK)
 
-
+![Frequency Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/fsk2.png)
+*Frequency Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
 ## 5.3. Phase Shift Keying (PSK)
 
+![Frequency Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/psk2.png)
+*Frequency Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
 
+
+
+The following image shows how each wave becomes after each modulation technique:
+
+![ASK vs FSK vs PSK]({{site.baseurl}}/assets/img/rfid_part4/three_modulations.png)
+*ASK vs FSK vs PSK - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
