@@ -14,28 +14,40 @@ As seen before, RFID uses electromagnetic waves as a means of communication in t
 
 The electromagnetic wave used is called **carrier wave**, while the reverse process of extracting the original information from this wave is known as **demodulation**.
 
-There are three basic modulation techniques, all of them manipulating one of the three basic characteristics of waves: amplitude, frequency or phase. All other modulation methods are derived from these three basic methods. 
+There are three basic modulation techniques, all of them manipulating one of the three basic characteristics of waves: amplitude, frequency or phase. All other modulation techniques are derived from these three basic methods. 
 
 ## 5.1. Amplitude Shift Keying (ASK)
 
+Amplitude Shift Keying (ASK) happens when the amplitude of the carrier wave oscillates between two distinct values, where a higher amplitude value represents the bit 1 while a lower amplitude value represents the bit 0. The image below might make things a little clearer:
 
 ![Amplitude Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/ask2.png)
 *Amplitude Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
+Due to its simplicity, this modulation technique can be implemented in any RFID system, provides the fastest data transfer rate but the worst resistance to interference.
+
 ## 5.2. Frequency Shift Keying (FSK)
+
+Frequency Shift Keying (FSK) happens when the frequency of the carrier wave oscillates between two distinct values, where a higher frequency value represents the bit 1 while a lower frequency value represents the bit 0. Again the image below might make things a little clearer: 
 
 ![Frequency Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/fsk2.png)
 *Frequency Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
+This modulation technique have the slowest data transfer rate but the best resistance to interference.
+
 ## 5.3. Phase Shift Keying (PSK)
+
+Phase Shift Keying (PSK) happens by changing the phase of the carrier wave, and this is possible by varying the sine and cosine inputs at a particular time. Due to this permissibility, PSK has some sub-variations, but we will only talk about the "Binary Phase Shift Keying" (BPSK or 2PSK).
+
+In the BSPK, whenever a transition of the digital signal values ​​occurs, there will be a 180 degree change in the phase of the carrier wave, that is, whenever there is a transition from bit 0 to bit 1, or vice versa, the carrier phase will be switched 180 degrees. The image below might make things a little clearer:
 
 ![Frequency Shift Keying]({{site.baseurl}}/assets/img/rfid_part4/psk2.png)
 *Frequency Shift Keying - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
+As only the phase of the carrier wave is modulated, it's possible to transfer more information in the same period of time, resulting in a data tranfer rate higher if compared to FSK but still lower than ASK. Its resistance to interference is moderate and is relatively simple to be implemented.
 
+## Summary
 
-
-The following image shows how each wave becomes after each modulation technique:
+The following image shows what each wave looks like after each modulation technique:
 
 ![ASK vs FSK vs PSK]({{site.baseurl}}/assets/img/rfid_part4/three_modulations.png)
 *ASK vs FSK vs PSK - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
