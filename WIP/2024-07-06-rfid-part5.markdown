@@ -7,3 +7,8 @@ img: rfid_part5/cover.png
 fig-caption: Source -    # Add figcaption (optional)
 tags: [RFID]
 ---
+
+# 6. Data encoding
+
+
+
