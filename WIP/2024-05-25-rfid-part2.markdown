@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RFID types of tags
-date: 2024-05-26 12:00:00 +0000
+date: 2024-05-25 12:00:00 +0000
 description: # RFID types of tags
 img: rfid_part2/cover.jpg
 fig-caption: # Add figcaption (optional)
