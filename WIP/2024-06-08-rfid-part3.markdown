@@ -2,7 +2,7 @@
 layout: post
 title: RFID coupling mechanisms
 subtitle: A physics approach 
-date: 2024-06-09 12:00:00 +0000
+date: 2024-06-08 12:00:00 +0000
 description: # RFID - Coupling mechanisms
 img: rfid_part3/cover.png
 fig-caption: Source - https://www.researchgate.net/figure/Magnetic-coupling-between-an-RFID-reader-and-transponder_fig1_351466626   # Add figcaption (optional)
