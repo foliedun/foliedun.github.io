@@ -1,0 +1,71 @@
+---
+layout: post
+title: RFID coupling mechanisms
+subtitle: A physics approach 
+date: 2024-05-11 12:00:00 +0000
+description: RFID - Coupling mechanisms
+img: rfid_part3/cover.png
+fig-caption: Source - https://www.researchgate.net/figure/Magnetic-coupling-between-an-RFID-reader-and-transponder_fig1_351466626   # Add figcaption (optional)
+tags: [RFID]
+---
+
+Understanding how RFID communicates is an interesting knowledge for those who want to implement it, for such, we will need to dive into some physics principles, such as electricity and magnetism.
+
+# 4. RFID coupling mechanisms
+
+For the tag and reader to communicate, their circuits need to couple, to pair. In physics, two objects are coupled when they interact with each other, so, in the RFID context, coupling happens when there is a transfer of energy and/or data between tag and reader. This process is known as **RFID coupling mechanism**.
+
+The main coupling mechanisms used are: backscatter coupling or backscattering, capacitive coupling and inductive coupling. Sometimes the terms "magnetic coupling" or "electromagnetic coupling" can be seen, however, those terms refers to any coupling that happens using the electromagnetic field of reader and tag. The coupling mechanisms affects various aspects of the RFID communication, such as reading range, required frequency, hardware needs and etc. For example, low frequency (LF) and high frequency (HF) are mainly used with inductive and capacitive coupling, while ultra high frequency (UHF) is more used with the backscatter coupling.
+
+![Coupling mechanisms]({{site.baseurl}}/assets/img/rfid_part3/coupling_mechanisms.jpg)
+*coupling mechanisms - Source: https://www.atlasrfidstore.com/product_images/uploaded_images/coupling-graphics-1-.jpg*
+
+## 4.1. Inductive coupling
+
+Inductive coupling is based on the physics concept of electromagnetic/magnetic induction. In the reader, the flow of an alternating current in the antenna generates an alternating magnetic field nearby, due to this, if a tag is positioned inside this magnetic field, an alternating current will be induced in tag's antenna and thus generating the electrical energy needed to power up its microchip.
+
+![Electromagnetic induction]({{site.baseurl}}/assets/img/rfid_part3/electromagnetic_induction.png)
+*Electromagnetic induction - Source: https://www.electricityforum.com/electromagnetic-induction*
+
+But what about data transfer? Here, load modulation is the technique used to transfer data between tag and reader. As seen above, thanks to the electromagnetic induction principle, a small electric current is generated in tag's antenna. This small current that flows in the tag also generates a small magnetic field of its own and opposite to the magnetic field of the reader. Due to mutual inductance between tag and reader, the small magnetic field of the tag generates a small electric current in reader's antenna, which is able to identify this small variation in its internal current. This way, varying its own internal current through a load resistor, the tag is capable of varying the charge it induces in the reader. If the tag does this variation in a controlled manner in relation to time, a pattern can be created to encode its internal information, which the reader is able to understand monitoring its own internal current variation in relation to time.
+
+## 4.2. Capacitive coupling
+
+Capacitive coupling, also known as electric coupling, uses the concept of capacitors and capacitance to couple tag and reader, but what is capacitors and capacitance?
+
+In physics, a capacitor, or condenser, is an object consisting of two electrical conductors, like two metal plates, isolated from each other by a non-conductive material, known as dielectric. When in operation, each plate will accumulate a type of electrical charge and from this potential difference an electric field is created between the plates. For example, when an electrical current is applied to the system, one plate will become more negatively charged (Q⁻) while the other will become more positively charged (Q⁺), from this difference an electric field is created between the plates.
+
+![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor1.png)  ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor2.png)
+*Capacitor - Source: http://3.bp.blogspot.com/-tFQ9uwbN6TA/UdI1j52MBTI/AAAAAAAAB9E/7WfSXnY8YQ0/* *Capacitor - Source: https://sites.ifi.unicamp.br/f328/files/2013/10/Aula-05-F328-2S-2013.pdf*
+
+<!--
+      Capacitor       |      Capacitor
+:--------------------:|:---------------------:
+![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor1.png)  |  ![Capacitor]({{site.baseurl}}/assets/img/rfid_part3/capacitor2.png)
+*Capacitor - Source: http://3.bp.blogspot.com/-tFQ9uwbN6TA/UdI1j52MBTI/AAAAAAAAB9E/7WfSXnY8YQ0/*  |  *Capacitor - Source: https://sites.ifi.unicamp.br/f328/files/2013/10/Aula-05-F328-2S-2013.pdf*
+-->
+
+This way, one of the main functions of a capacitor is to store the potential energy that is established between their conductors in the form of an electric field, and being so good at it that the potential difference remains for a short period of time even after the power supply is cut off.
+
+![Capacitors]({{site.baseurl}}/assets/img/rfid_part3/capacitors.jpg)
+*Example of commercial capacitors - Source: https://en.wikipedia.org/wiki/Capacitor*
+
+Capacitance is the ability of an object to store electrical energy, in other words, it measures the amount of electrical energy that can be stored in a capacitor for a given electrical potential difference. The greater the capacitance, the greater the amount of energy that can be stored.
+
+Back to RFID, the electric field will be the one responsible to couple tag and reader. The reader's antenna is made up of a conductive metal plate which, when applied with a voltage, generates a electric field between the plate and the neutral. Similarly, the tag's antenna is formed by two conductive plates positioned parallel to each other (forming a plane), when the tag's antenna is placed within the electric field generated by the reader's antenna, an electrical voltage is induced between the tag's plates, thus generating the current necessary to power the chip.
+
+![Capacitive coupling]({{site.baseurl}}/assets/img/rfid_part3/capacitive_coupling.png)
+*Capacitive coupling - Source: FINKENZELLER, K. RFID Handbook, page 51*
+
+## 4.3. Backscatter coupling or backscattering
+
+In physics, backscattering is the reflection of waves, particles or signals back to the direction of the source, in other words, it's a type of dispersion (scattering) in which the angle of reflection is around 180 degrees. <!-- It's considered a diffuse reflection due to its dispersion. -->It happens because most objects with dimensions greater than half of the wavelength of the incident electromagnetic wave are capable of reflecting part of this wave back to the emitter. In this sense, the backscattering found in RFID is quite similiar to the ones used in radars, for example.
+
+Back to RFID, in this coupling mechanism the radio frequency waves emitted by the reader are used to energize or to wake up the tag. The tag then re-radiates part of the received waves back to the reader, but changing some of the wave properties to encode and send its information back. The image below exemplifies this behaviour.
+
+![Backscattering]({{site.baseurl}}/assets/img/rfid_part3/backscattering_example.png)
+*Backscattering - Source: https://www.researchgate.net/figure/RFID-system-operation-The-backscattered-signal-is-modulated-by-changes-in-chip-impedance_fig1_3018375*
+
+To allow the transmission and reception of signals at the same time, a directional coupler is often needed to allow the received signal to be separated from the transmitted one. The reader also needs to be able to detect the modulation used by the tag in the presense of many other backscatterings.
+
+Due to the characteristics of backscattering, the radio waves emitted can travel far beoynd the tag or reader, allowing it to operate over long distances and being widely used in RFID systems with ultra high frequency (UHF) tags.
