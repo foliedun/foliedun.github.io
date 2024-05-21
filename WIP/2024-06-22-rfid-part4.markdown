@@ -7,3 +7,24 @@ img: rfid_part4/cover.png
 fig-caption: Source -    # Add figcaption (optional)
 tags: [RFID]
 ---
+
+# 5. Data modulation
+
+As seen before, RFID uses electromagnetic waves as a means of communication in the physical world. This way, for the exchange of information to occur, it's necessary that the data in digital format (zeros and ones) be transformed into analog format (electromagnetic waves), in other words, we need a way to "insert" those bits into the electromagnetic waves, so they can be emitted and received by tag and reader antennas. This process is known as **digital modulation**, or simply **modulation**. 
+
+The manipulated electromagnetic wave is called **carrier wave**, while the reverse process of extracting the original information from this wave is known as **demodulation**.
+
+There are three basic modulation techniques, all of them manipulating one of the three basic characteristics of waves: amplitude, frequency or phase. All other modulation methods are derived from these three basic methods. 
+
+## 5.1. Amplitude Shift Keying (ASK)
+
+
+
+## 5.2. Frequency Shift Keying (FSK)
+
+
+
+## 5.3. Phase Shift Keying (PSK)
+
+
+
