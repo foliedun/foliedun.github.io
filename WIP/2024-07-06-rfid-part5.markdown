@@ -12,9 +12,9 @@ tags: [RFID]
 
 Data encoding is the process of changing the bitstream (a sequence of 0s and 1s) of data to a format so they can travel safely along the path between communication components. Not every data encoding can be implemented in every system, characteristics like: number of bits to be encoded, minimum required transfer rate, redundancy required for error recovery and others, influence in the type of encoding that can be implemented.
 
-Data encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero (NRZ) Direct, Differential Biphase and Manchester (Biphase_L)
+Data encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero (NRZ), Differential Biphase and Manchester (Biphase_L)
 
-## 6.1. Non-Return to Zero Direct
+## 6.1. Non-Return to Zero (NRZ)
 
 Despite the name, this encoding method does not do any encoding at all, it simply synchronizes the bitstream with the transmission clock to stream, which means that a bit 1 is send as a "strong" signal while a bit 0 is send as a "weak" signal. As you can imagine, this encoding method have problems when a very long sequence of 0s or 1s need to be send. This kind of encoding is used almost exclusively with modulations FSK and PSK.
 
