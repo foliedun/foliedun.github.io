@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RFID data modulation
+title: RFID and digital modulation
 date: 2024-06-22 12:00:00 +0000
 description: # RFID - Coupling mechanisms
 img: rfid_part4/cover.png
@@ -8,7 +8,7 @@ fig-caption: Source -    # Add figcaption (optional)
 tags: [RFID]
 ---
 
-# 5. Data modulation
+# 5. Digital modulation
 
 As seen before, RFID uses electromagnetic waves as a means of communication in the physical world. This way, for the exchange of information to occur, it's necessary that the data in digital format (zeros and ones) be transformed into analog format (electromagnetic waves), in other words, we need a way to "insert" those bits into the electromagnetic waves, so they can be emitted and received by tag and reader antennas. This process is known as **digital modulation**, or simply **modulation**. 
 
