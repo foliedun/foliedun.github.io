@@ -2,7 +2,7 @@
 layout: post
 title: RFID and digital modulation
 date: 2024-06-22 12:00:00 +0000
-description: # RFID - Coupling mechanisms
+description: RFID and digital modulation
 img: rfid_part4/cover.png
 fig-caption: Source - https://resources.system-analysis.cadence.com/blog/msa2021-types-of-digital-modulation    # Add figcaption (optional)
 tags: [RFID]
