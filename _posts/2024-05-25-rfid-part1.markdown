@@ -2,7 +2,7 @@
 layout: post
 title: Let's talk about RFID
 date: 2024-05-25 10:00:00 +0000
-description: # Add post description (optional)
+description: A short introduction about RFID, its infrastructure and components
 img: rfid_part1/cover.jpg
 fig-caption: # Add figcaption (optional)
 tags: [RFID]
