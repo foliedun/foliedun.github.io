@@ -45,13 +45,13 @@ In the BSPK, whenever a transition of the digital signal values ​​occurs, th
 
 As only the phase of the carrier wave is modulated, it's possible to transfer more information in the same period of time, resulting in a data tranfer rate higher if compared to FSK but still lower than ASK. Its resistance to interference is moderate and is relatively simple to be implemented.
 
+#### Summary
 
 The following image shows what each wave looks like after each modulation technique:
 
 ![ASK vs FSK vs PSK]({{site.baseurl}}/assets/img/rfid_part4/three_modulations.png)
 *ASK vs FSK vs PSK - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
-#### Summary
 
 # 6. Digital encoding
 
