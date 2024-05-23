@@ -45,22 +45,52 @@ In the BSPK, whenever a transition of the digital signal values ​​occurs, th
 
 As only the phase of the carrier wave is modulated, it's possible to transfer more information in the same period of time, resulting in a data tranfer rate higher if compared to FSK but still lower than ASK. Its resistance to interference is moderate and is relatively simple to be implemented.
 
-## Summary
 
 The following image shows what each wave looks like after each modulation technique:
 
 ![ASK vs FSK vs PSK]({{site.baseurl}}/assets/img/rfid_part4/three_modulations.png)
 *ASK vs FSK vs PSK - Source: https://www.slideshare.net/slideshow/digital-modulation-techniques-57572540/57572540*
 
-# 6. Data encoding
+#### Summary
 
-Data encoding is the process of changing the bitstream (a sequence of 0s and 1s) of data to a format so they can travel safely along the path between communication components. Not every data encoding can be implemented in every system, characteristics like: number of bits to be encoded, minimum required transfer rate, redundancy required for error recovery and others, influence in the type of encoding that can be implemented.
+# 6. Digital encoding
 
-Data encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero (NRZ), Differential Biphase and Manchester (Biphase_L)
+Digital encoding is the process of changing the bitstream (a sequence of 0s and 1s) of data to a format so they can travel safely along the path between communication components. Not every data encoding can be implemented in every system, characteristics like: number of bits to be encoded, minimum required transfer rate, redundancy required for error recovery and others, influence in the type of encoding that can be implemented.
 
-## 6.1. Non-Return to Zero (NRZ)
+Digital encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero level (NRZ-L), Differential Manchester (Differential Biphase) and Manchester (Biphase-L).
+
+## 6.1. Non-Return to Zero level (NRZ-L)
 
 Despite the name, this encoding method does not do any encoding at all, it simply synchronizes the bitstream with the transmission clock to stream, which means that a bit 1 is send as a "strong" signal while a bit 0 is send as a "weak" signal. As you can imagine, this encoding method have problems when a very long sequence of 0s or 1s need to be send. This kind of encoding is used almost exclusively with modulations FSK and PSK.
 
+![Non-Return to Zero]({{site.baseurl}}/assets/img/rfid_part4/nrz.png)
+*Non-Return to Zero - Source: https://electronics.stackexchange.com/questions/613496/digital-data-to-digital-signals-with-non-return-to-zeronrz*
 
-## 6.2. Differential Biphase
+## 6.2. Manchester (Biphase-L)
+
+In the Manchester encoding, also known as Biphase-L, there is a transition in the signal "power" in every middle of each bit period and, depending of the next information to be transmitted, it may also have a transition at the start of the bit period. The direction of the mid-bit transition indicates the data it wants to tranfer, while the start-bit transition does not have a meaning by its own.
+
+Bit 0 is represented by a **high-to–low** signal sequence, while bit 1 is represented by a **low-to–high** signal sequence. The image below might make things a little clearer:
+
+![Manchester]({{site.baseurl}}/assets/img/rfid_part4/manchester.png)
+*Manchester - Source: https://en.wikipedia.org/wiki/Manchester_code*
+
+All these transitions are governed by a clock, which is used by the receiver to decode the information, and the clock signal is embedded into the transmitted data, so a separated signal is not needed, which makes simpler and lower-cost to implement. 
+
+## 6.3. Differential Manchester (Differential Biphase)
+
+The differential manchester encoding, also known as differential biphase, is an "evolution" of the manchester encoding. Here, there is also a transition in the signal "power" in every middle of each bit period, however, this transition does not have a meaning by its own and server only to ease clock recovery, while the transition (or lack of it) at the start of the bit period indicates the data it wants to tranfer.
+
+Bit 0 is represented by a stability in the signal power, while bit 1 is represented by a change in the signal power. The other way around is also possible. The image below might make things a little clearer:
+
+![Differential Manchester]({{site.baseurl}}/assets/img/rfid_part4/diff_manchester.jpg)
+*Differential Manchester - Source: https://commons.wikimedia.org/wiki/File:Differential_Manchester_encoding_alternatives.png*
+
+#### Summary
+
+The following image shows what each wave looks like after each encoding technique:
+
+![NRZ vs Differential Manchester vs Manchester]({{site.baseurl}}/assets/img/rfid_part4/digital_encodings.png)
+*NRZ vs Differential Manchester vs Manchester - https://en.wikipedia.org/wiki/File:Digital_signal_encoding_formats-en.svg*
+
+
