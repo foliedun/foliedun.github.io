@@ -57,7 +57,7 @@ The following image shows what each wave looks like after each modulation techni
 
 Digital encoding is the process of changing the bitstream (a sequence of 0s and 1s) of data to a format so they can travel safely along the path between communication components. Not every data encoding can be implemented in every system, characteristics like: number of bits to be encoded, minimum required transfer rate, redundancy required for error recovery and others, influence in the type of encoding that can be implemented.
 
-Digital encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero level (NRZ-L), Differential Manchester (Differential Biphase) and Manchester (Biphase-L).
+Digital encoding is a huge topic by its own, so we will only talk superficially about the three most popular methods used in RFID systems: Non-Return to Zero level (NRZ-L), Differential Manchester (Differential Biphase) and Manchester (Biphase-L); and one used in NFC: Modified Miller
 
 ## 6.1. Non-Return to Zero level (NRZ-L)
 
@@ -92,5 +92,7 @@ The following image shows what each wave looks like after each encoding techniqu
 
 ![NRZ vs Differential Manchester vs Manchester]({{site.baseurl}}/assets/img/rfid_part4/digital_encodings.png)
 *NRZ vs Differential Manchester vs Manchester - https://en.wikipedia.org/wiki/File:Digital_signal_encoding_formats-en.svg*
+
+## 6.4. Modified Miller
 
 
