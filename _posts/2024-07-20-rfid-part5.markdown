@@ -2,7 +2,7 @@
 layout: post
 title: RFID and NFC
 date: 2024-07-20 10:00:00 +0000
-description: RFID and NFC
+description: A post about RFID and NFC, their similarities and differences 
 img: rfid_part5/cover.jpg
 fig-caption: Source - https://www.corerfid.com/rfid-technology/what-is-rfid/introduction-to-rfid/    # Add figcaption (optional)
 tags: [RFID, NFC]
