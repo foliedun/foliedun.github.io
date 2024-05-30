@@ -9,7 +9,8 @@ tags: [RFID]
 ---
 
 This is the first in a series of posts about RFID, hope you enjoy.
-<br />
+<br /><br />
+
 **R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
 
@@ -23,7 +24,7 @@ RFID infrastructures are generally made up of 4 basic components:
 
 <figure class="image">
   <img src="{{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg" alt="RFID basic system components">
-  <figcaption>RFID basic system components - Source: [1]</figcaption>
+  <figcaption>RFID basic system components - Source: [1](#References)</figcaption>
 </figure>
 
 Also, the infrastructure as a whole can be classified by the types of tag and reader in use:
