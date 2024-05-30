@@ -26,12 +26,8 @@ RFID infrastructures are generally made up of 4 basic components:
 
 <figure class="image">
   <img src="{{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg" alt="RFID basic system components">
-  <figcaption>RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/</figcaption>
+  <figcaption>RFID basic system components - Source: [1]</figcaption>
 </figure>
-<!-- 
-![RFID basic system components]({{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg)
-*RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/*
--->
 
 Also, the infrastructure as a whole can be classified by the types of tag and reader in use:
 * Passive Reader Active Tag (PRAT): Based in a passive reader that only receives radio signals from active tags that are battery operated and only transmit.
@@ -74,3 +70,8 @@ It is worth noting, however, that not all RFID implementations would require a m
 ## 2.4. Management software
 
 The management software can be considered the backend of the RFID infrastructure, like databases, management software (WMS, SAP, Microsiga) and others. It's where the required information to the whole system is stored, managed and queried by the middleware.
+
+
+# References
+
+[1] ![https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/](https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/)
