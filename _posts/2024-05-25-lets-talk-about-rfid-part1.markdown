@@ -24,7 +24,7 @@ RFID infrastructures are generally made up of 4 basic components:
 
 <figure class="image">
   <img src="{{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg" alt="RFID basic system components">
-  <figcaption>RFID basic system components - Source: [1](#References)</figcaption>
+  <figcaption>RFID basic system components - Source: [1]</figcaption>
 </figure>
 
 Also, the infrastructure as a whole can be classified by the types of tag and reader in use:
