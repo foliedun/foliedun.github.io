@@ -71,4 +71,4 @@ The management software can be considered the backend of the RFID infrastructure
 
 # References
 
-1. ![https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/](https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/)
+[1] [https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/](https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/)
