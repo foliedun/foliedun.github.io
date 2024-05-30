@@ -11,7 +11,7 @@ tags: [RFID]
 This is the first in a series of posts about RFID, hope you enjoy.
 <br /><br />
 
-<span style="font-size: 135%">**R**adio-**F**requency **ID**entification</span>, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
+<span style="font-size: 130%">**R**adio-**F**requency **ID**entification</span>, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
 
 # General infrastructure and components
