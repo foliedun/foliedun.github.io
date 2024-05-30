@@ -13,7 +13,7 @@ This is the first in a series of posts about RFID, hope you enjoy.
 **R**adio-**f**requency **id**entification, or RFID, is a technology of wireless communication that uses electromagnetic fields and radio waves to remotely store, retrieve, exchange or identify information digitally contained in special devices known as RFID tags. It's already widely present in our daily lives, like in: access control, contactless payment, inventory control, tracking, anti-theft system and many others.
 
 
-# 1. General infrastructure and components
+# General infrastructure and components
 
 RFID infrastructures are generally made up of 4 basic components:
 * Tag or transponder
@@ -32,7 +32,7 @@ Also, the infrastructure as a whole can be classified by the types of tag and re
 * Active Reader Active Tag (ARAT): Based in a active reader that "wake up" active tags when they enter in its range.
 
 
-## 1.1. Tag or transponder
+## Tag or transponder
 
 RFID tags are the devices in the end of the chain, the ones closer to the user, and responsible to identify the object/person who possesses it. It's general composition is basically the same:
 
@@ -45,7 +45,7 @@ RFID tags are the devices in the end of the chain, the ones closer to the user, 
 The tag itself is not aware of its composition, format or content, nor of its access privileges for the cardholder, being responsibility of the other elements of the system to guarantee and apply it.
 
 
-## 1.2. Reader or interrogator
+## Reader or interrogator
 
 The reader is responsible to generate the electromagnetic field that will power up the RFID tags, to interrogate the tags in its range and request the information in tag's memory, to synchronize the communication process, to receive the response via radio frequency and decode this analog signal into digital and then send this digital signal to the middleware.  
 <!-- Reader's antenna is the component that produces the electromagnetic field needed and to generate and receive radio wave signals. -->
@@ -55,7 +55,7 @@ Readers are categorized in two types, based in its capabilities: read-only and r
 As with tags, the reader itself is not aware of the composition, format, content or access privileges of the tag, being responsibility of the other elements of the system to guarantee and apply it.
 
 
-## 1.3. Middleware or controller
+## Middleware or controller
 
 Middleware is a generic term used to describe the software that sits between the reader and the management software. It's a critical component in any medium-to-big RFID infrastructure because it's the responsible for: control all peripheral devices (tags and readers); mediate the communication between peripherals and management software; abstract different technologies from different readers; decode, format, filter and understand the format of data coming from the reader and some others.
 
@@ -64,7 +64,7 @@ As the first component in the infrastructure that can decode and understand the 
 It is worth noting, however, that not all RFID implementations would require a middleware. When the number of tags read are high, when the traffic of information is intense or when the high availability of the services that are interacting with the RFID system is essential, then a middleware is desired.
 
 
-## 1.4. Management software
+## Management software
 
 The management software can be considered the backend of the RFID infrastructure, like databases, management software (WMS, SAP, Microsiga) and others. It's where the required information to the whole system is stored, managed and queried by the middleware.
 
