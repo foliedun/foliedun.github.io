@@ -24,7 +24,7 @@ RFID infrastructures are generally made up of 4 basic components:
 * Middleware or controller
 * Management software, host software, enterprise software and etc
 
-![RFID basic system components]({{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg)
+![RFID basic system components]({{site.baseurl}}/assets/img/rfid_part1/basic_system_components.jpg)    
 RFID basic system components - source: https://www.atlasrfidstore.com/rfid-insider/6-things-rfid-middleware-can-do-for-you/
 
 Also, the infrastructure as a whole can be classified by the types of tag and reader in use:
