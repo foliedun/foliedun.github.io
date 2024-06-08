@@ -14,7 +14,7 @@ Hi friend, nice to see you again!
 This is the second post in a series about RFID and you can find the previous one [here]({{site.baseurl}}/lets-talk-about-rfid-part1/).
 
 Today we'll talk about RFID tags, its internal components and how they're classified. Hope you enjoy.
-<br /><br />
+<br />
 
 
 # Types of tags
@@ -47,7 +47,7 @@ Passive tags don't have an internal energy souce nor an active transmitter, so t
 Due to the very low production cost; usually just a simple microchip, copper wire and pvc/plastic; passive tags are the most found on the market and the most implemented in projects, therefore, more emphasis will be placed on them.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/rfid_part2/passive_tag.png" alt="RFID passive tag">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/rfid_part2/passive_tag.png" width="75%" height="75%" alt="RFID passive tag">
   <figcaption style="text-align: center;">RFID passive tag - Source: [2]</figcaption>
 </figure>
 
