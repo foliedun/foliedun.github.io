@@ -89,7 +89,8 @@ As said before, RFID communicates through radio waves, and one of its properties
 
 # References
 
-[1] [https://learn.sparkfun.com/tutorials/rfid-basics/all](https://learn.sparkfun.com/tutorials/rfid-basics/all)
-[2] [https://ae01.alicdn.com/kf/HTB1_vIVKpXXXXcBXXXXq6xXFXXXW/RFID-Thick-Card-Mango-125KHz-Thick-Card-Access-Control-System-Card.jpg](https://ae01.alicdn.com/kf/HTB1_vIVKpXXXXcBXXXXq6xXFXXXW/RFID-Thick-Card-Mango-125KHz-Thick-Card-Access-Control-System-Card.jpg)
-[3] [https://www.researchgate.net/figure/A-typical-semi-passive-tag-with-an-internal-battery-116_fig3_339643122](https://www.researchgate.net/figure/A-typical-semi-passive-tag-with-an-internal-battery-116_fig3_339643122)
-[4] [https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized](https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized)
+[1] [https://learn.sparkfun.com/tutorials/rfid-basics/all](https://learn.sparkfun.com/tutorials/rfid-basics/all)\
+[2] [https://ae01.alicdn.com/kf/HTB1_vIVKpXXXXcBXXXXq6xXFXXXW/RFID-Thick-Card-Mango-125KHz-Thick-Card-Access-Control-System-Card.jpg](https://ae01.alicdn.com/kf/HTB1_vIVKpXXXXcBXXXXq6xXFXXXW/RFID-Thick-Card-Mango-125KHz-Thick-Card-Access-Control-System-Card.jpg)\
+[3] [https://www.researchgate.net/figure/A-typical-semi-passive-tag-with-an-internal-battery-116_fig3_339643122](https://www.researchgate.net/figure/A-typical-semi-passive-tag-with-an-internal-battery-116_fig3_339643122)\
+[4] [https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized](https://www.impinj.com/products/technology/how-can-rfid-systems-be-categorized)\
+
