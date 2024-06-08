@@ -35,7 +35,7 @@ Active tags have an internal energy source, like a battery, that powers on the m
 * Beacon: always awake, emitting signals at predefined intervals.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/rfid_part2/active_tag.png" alt="RFID active tag">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/rfid_part2/active_tag.png" width="125%" height="125%" alt="RFID active tag">
   <figcaption style="text-align: center;">RFID active tag - Source: [1]</figcaption>
 </figure>
 
