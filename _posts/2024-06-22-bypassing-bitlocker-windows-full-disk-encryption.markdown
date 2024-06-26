@@ -91,7 +91,7 @@ Trusted Platform Module (TPM) is an international standard (ISO/IEC 11889) to ha
 **TPM works with BitLocker by ensuring the devices's hardware and software/firmware weren't tampered, and if everything is fine, it releases the key to decrypt the VMK.**
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-internal.png" alt="TPM internal functions">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-internal.png" width="50%" height="50%" alt="TPM internal functions">
   <figcaption style="text-align: center;">TPM internal functions - Source: [10]</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ The process of encrypting a secret/key with the public SRK is called "binding" o
 For example, the validation process start by checking the BIOS, creating and storing a hash of it in a PCR; then the hardware is checked, with a hash of it also stored in a PCR; next the same happens to the partition table (MBR/GPT) of the disk, and so on. Each stage of the boot process is responsible for hashing the next and storing it in a PCR.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-hierarchy.png" alt="TPM keys hierarchy">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-hierarchy.png" width="50%" height="50%" alt="TPM keys hierarchy">
   <figcaption style="text-align: center;">TPM keys hierarchy - Source: [21]</figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ The first boot was smooth and we were presented with the Windows login screen af
 After a bit of research we found the following image from the terrific work ![An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" alt="Volume keys attacks">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="50%" height="50%" alt="Volume keys attacks">
   <figcaption style="text-align: center;">Volume keys attacks - Source: [22]</figcaption>
 </figure>
 
@@ -141,20 +141,20 @@ The "Wrapped by TPM" section seemed quite impossible at first, but then we found
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" alt="Motherboard schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="50%" height="50%" alt="Motherboard schematics">
   <figcaption style="text-align: center;">Motherboard schematics</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" alt="Motherboard schematics zoom">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="50%" height="50%" alt="Motherboard schematics zoom">
   <figcaption style="text-align: center;">Motherboard schematics zoom</figcaption>
 </figure>
 
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" alt="TPM chip">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="50%" height="50%" alt="TPM chip">
   <figcaption style="text-align: center;">TPM chip</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" alt="W25Q128JVSIQ chip">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="50%" height="50%" alt="W25Q128JVSIQ chip">
   <figcaption style="text-align: center;">W25Q128JVSIQ chip</figcaption>
 </figure>
 
@@ -162,22 +162,18 @@ Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentia
 But why this is so amazing? Because if we take a look in this TPM chip we will see it's of type QFN-32, which makes contact with its pins much much harder. The BIOS chip, on the other hand, is usually much bigger and with pins much easier to be hooked, and **because they share the same SPI bus we can sniff the CPU-TPM communication by hooking the BIOS**. Simply fantastic!
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" alt="NPCT750JAAYX chip">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="50%" height="50%" alt="NPCT750JAAYX chip">
   <figcaption style="text-align: center;">NPCT750JAAYX chip</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" alt="W25Q128JVSIQ chip">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="50%" height="50%" alt="W25Q128JVSIQ chip">
   <figcaption style="text-align: center;">W25Q128JVSIQ chip</figcaption>
 </figure>
 
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" alt="GD25B127D schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="50%" height="50%" alt="GD25B127D schematics">
   <figcaption style="text-align: center;">GD25B127D schematics</figcaption>
-<!--
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics2.png" alt="GD25B127D schematic definitions">
-  <figcaption style="text-align: center;">GD25B127D schematic definitions</figcaption>
- -->
 </figure>
 
 Now comes the expensive part. Theoretically, to the spoofing, we would require a logic analyzer capable of recording four logic signals simultaneously at a sampling rate of 100MHz. I say theoretically because the sampling rate of 100MHz is due to the theoretical average speed of SPI, however, as we'll see later on, we ended up needing much more than this, so beware when buying a logic analyzer different from the one used here. Nevertheless, we'll use a [Saleae Logic Pro 8](https://www.saleae.com/products/saleae-logic-pro-8) (told it would be expensive).\
@@ -197,10 +193,10 @@ By using the schematics above, and the small dot in both schematic and chip as a
 * Purple wire: from Saleae port 3 to chip pin 5 (SI)
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" alt="BIOS chip hooked">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="50%" height="50%" alt="BIOS chip hooked">
   <figcaption style="text-align: center;">BIOS chip hooked</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" alt="BIOS chip hooked">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="50%" height="50%" alt="BIOS chip hooked">
   <figcaption style="text-align: center;">BIOS chip hooked</figcaption>
 </figure>
 
@@ -209,45 +205,45 @@ On the software side, we will use the free [Logic 2](https://www.saleae.com/page
 When you open the Logic 2 with a Saleae attached you're directly redirect to the capture session screen, where we'll set device parameters, like add the digital signals from 0 to 3, change their names to relate with our pinouts (you don't have to, but helps), set the sampling rate to 250 MS/s and the voltage to 3.3+ Volts. I did some tests with different rates and voltages but these were what worked to me:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" alt="Logic 2 configured">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="50%" height="50%" alt="Logic 2 configured">
   <figcaption style="text-align: center;">Logic 2 configured</figcaption>
 </figure>
 
 Next we go to the "Extensions" tab, where we'll load the "BitLocker Key Extractor" from [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit).
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" alt="Logic 2 load extension">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="50%" height="50%" alt="Logic 2 load extension">
   <figcaption style="text-align: center;">Logic 2 load extension</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" alt="Logic 2 load extension">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="50%" height="50%" alt="Logic 2 load extension">
   <figcaption style="text-align: center;">Logic 2 load extension</figcaption>
 </figure>
 
 Last the "Analyzers" tab, where we'll set and configure the communication protocol (SPI) and the "BitLocker Key Extractor" extension. There's a trick here, if you remember we're capturing the TPM signals through the BIOS chip, so our CS signal is inverted for what it should be and tha's exactly what we're changing below:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" alt="Logic 2 SPI">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="50%" height="50%" alt="Logic 2 SPI">
   <figcaption style="text-align: center;">Logic 2 SPI</figcaption>
   
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" alt="Logic 2 SPI configuration">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="50%" height="50%" alt="Logic 2 SPI configuration">
   <figcaption style="text-align: center;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" alt="Logic 2 bitlocker extractor">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
   <figcaption style="text-align: center;">Logic 2 bitlocker extractor</figcaption>
   
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" alt="Logic 2 bitlocker extractor">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
   <figcaption style="text-align: center;">Logic 2 bitlocker extractor</figcaption>  
 </figure>
 
 With everything set, we can finally capture the VMK. Press the play/capture buttom, turn on the laptop, wait and pray (and don't forget to stop the capturing when Windows finishes booting). If everything run as expected you'll get the **VMK in hex**:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" alt="Logic 2 capturing VMK">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
   <figcaption style="text-align: center;">Logic 2 capturing VMK</figcaption>
   
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" alt="Logic 2 capturing VMK">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
   <figcaption style="text-align: center;">Logic 2 capturing VMK</figcaption>  
 </figure>
 
@@ -260,7 +256,7 @@ $ sudo mount -t ntfs-3g -o loop /mnt/dec/dislocker-file /mnt/win/
 ```
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mount_volume.jpg" alt="Mounting decrypted volume">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mount_volume.jpg" width="50%" height="50%" alt="Mounting decrypted volume">
   <figcaption style="text-align: center;">Mounting decrypted volume</figcaption>
 </figure>
 
