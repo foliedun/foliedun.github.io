@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TPM, BitLocker and the keys of the kingdom
-date: 2024-xx-xx 10:00:00 +0000
+date: 2024-06-22 10:00:00 +0000
 description: Today we'll learn about TPM, BitLocker, Windows full disk encryption and how to steal the keys of the kingdom. Based on the work of Henri Nurmi.
 img: bitlocker/cover.jpg
 fig-caption:   # Add figcaption (optional)
