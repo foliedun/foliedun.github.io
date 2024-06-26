@@ -14,12 +14,6 @@ Hi friend, nice to see you again!
 Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key of the kingdom. Hope you enjoy.
 <br /><br />
 
-<!--
-Some time ago, during a meeting with some clients, me and the team were challenged by one of them to try to access one of his company's laptop. The idea of the project was simple: Imagine if the laptop of one of the company's VIP is lost, stolen or attacked in an "evil maid" style, what could be done?\
-At first everything seems pretty straightforward and not so hard, right? Except for one detail: a full disk encryption.
-
-Some time ago, during a meeting, a client came with the following scenario: Imagine if the laptop of one of the company's VIP is lost or stolen, what could be done?
--->
 Some time ago, during a meeting, a client came with the following scenario: Imagine if the laptop of one of the company's VIP is lost or stolen, what could be done?\
 Although we have never researched or done anything remotely close to this, we couldn't refuse a challenge, mainly when someone dares you can't, and even if success was not possible, the knowledge gained would be interesting and valuable.
 
@@ -126,9 +120,6 @@ For example, the validation process start by checking the BIOS, creating and sto
 
 # Avenues of attack
 
-<!--
-With the laptop in hands, it didn't take us too long to notice the disk was encrypted, which was good because, otherwise, we might have locked ourselves out by playing with the BIOS. And here is the first tip: As seen above, small modifications may put the machine in BitLocker recovery mode (baaaad, really bad), so be careful when handling it.
--->
 The first boot was smooth and we were presented with the Windows login screen after a few seconds, which is good because it means the machine was not configured with pre-boot authentication.\
 After a bit of research we found the following image from the terrific work ![An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
 
