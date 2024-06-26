@@ -73,7 +73,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Exceeding the maximum allowed number of failed sign-in attempts
 
 <figure style="display: table;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="60%" height="60%" alt="BitLocker recovery mode">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" alt="BitLocker recovery mode">
   <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
