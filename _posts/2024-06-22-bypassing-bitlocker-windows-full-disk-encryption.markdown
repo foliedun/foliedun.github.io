@@ -55,7 +55,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Active Directory Domain Services (AD DS) account: Uses domain authentication to unlock data volumes. Operating system volumes cannot use this type of key protector.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="50%" height="50%" alt="BitLocker preboot with pin">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="70%" height="70%" alt="BitLocker preboot with pin">
   <figcaption style="text-align: center;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Exceeding the maximum allowed number of failed sign-in attempts
 
 <figure style="display: table;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" alt="BitLocker recovery mode">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="70%" height="70%" alt="BitLocker recovery mode">
   <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
