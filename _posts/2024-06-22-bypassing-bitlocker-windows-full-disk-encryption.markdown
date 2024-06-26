@@ -35,7 +35,7 @@ How does it works?\
 Briefly, the volume's raw data is encrypted with a **Full Volume Encryption Key (FVEK)**, this FVEK is then encrypted by a **Volume Master Key (VMK)** and stored in the metadata section of the encrypted volume. The VMK is then encrypted by one or more of the several possible key protectors and recovery scenarios and also stored in volume's metadata.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-keys.png" alt="BitLocker keys">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-keys.png" alt="BitLocker keys">
   <figcaption style="text-align: center;">BitLocker keys - Source: [20]</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Active Directory Domain Services (AD DS) account: Uses domain authentication to unlock data volumes. Operating system volumes cannot use this type of key protector.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="70%" height="70%" alt="BitLocker preboot with pin">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="70%" height="70%" alt="BitLocker preboot with pin">
   <figcaption style="text-align: center;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Exceeding the maximum allowed number of failed sign-in attempts
 
 <figure style="display: table;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="70%" height="70%" alt="BitLocker recovery mode">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="70%" height="70%" alt="BitLocker recovery mode">
   <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ Trusted Platform Module (TPM) is an international standard (ISO/IEC 11889) to ha
 **TPM works with BitLocker by ensuring the devices's hardware and software/firmware weren't tampered, and if everything is fine, it releases the key to decrypt the VMK.**
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-internal.png" width="50%" height="50%" alt="TPM internal functions">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-internal.png" alt="TPM internal functions">
   <figcaption style="text-align: center;">TPM internal functions - Source: [10]</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ The process of encrypting a secret/key with the public SRK is called "binding" o
 For example, the validation process start by checking the BIOS, creating and storing a hash of it in a PCR; then the hardware is checked, with a hash of it also stored in a PCR; next the same happens to the partition table (MBR/GPT) of the disk, and so on. Each stage of the boot process is responsible for hashing the next and storing it in a PCR.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-hierarchy.png" width="50%" height="50%" alt="TPM keys hierarchy">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-hierarchy.png" alt="TPM keys hierarchy">
   <figcaption style="text-align: center;">TPM keys hierarchy - Source: [21]</figcaption>
 </figure>
 
