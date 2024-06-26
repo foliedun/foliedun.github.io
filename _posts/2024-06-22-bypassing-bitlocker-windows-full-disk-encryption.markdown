@@ -35,7 +35,7 @@ How does it works?\
 Briefly, the volume's raw data is encrypted with a **Full Volume Encryption Key (FVEK)**, this FVEK is then encrypted by a **Volume Master Key (VMK)** and stored in the metadata section of the encrypted volume. The VMK is then encrypted by one or more of the several possible key protectors and recovery scenarios and also stored in volume's metadata.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-keys.png" width="50%" height="50%" alt="BitLocker keys">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-keys.png" alt="BitLocker keys">
   <figcaption style="text-align: center;">BitLocker keys - Source: [20]</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Active Directory Domain Services (AD DS) account: Uses domain authentication to unlock data volumes. Operating system volumes cannot use this type of key protector.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="50%" height="50%" alt="BitLocker preboot with pin">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="75%" height="75%" alt="BitLocker preboot with pin">
   <figcaption style="text-align: center;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
