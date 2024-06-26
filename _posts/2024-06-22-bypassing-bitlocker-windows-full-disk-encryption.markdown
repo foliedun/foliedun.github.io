@@ -72,8 +72,8 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * On devices with TPM 1.2, changing the BIOS or firmware boot device order
 * Exceeding the maximum allowed number of failed sign-in attempts
 
-<figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="50%" height="50%" alt="BitLocker recovery mode">
+<figure style="display: inline-block;" width="60%" height="60%">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" alt="BitLocker recovery mode">
   <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
