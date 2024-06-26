@@ -1,8 +1,8 @@
 ---
 layout: post
-title: TPM, BitLocker and the key of the kingdom
+title: TPM and BitLocker, stealing the key to the kingdom
 date: 2024-06-22 10:00:00 +0000
-description: Today we'll learn about TPM, BitLocker, Windows full disk encryption and how to steal the keys of the kingdom. Based on the work of Henri Nurmi.
+description: Today we'll learn about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. Based on the work of Henri Nurmi.
 img: bitlocker/cover.jpg
 fig-caption:   # Add figcaption (optional)
 tags: [hardware, bitlocker, encryption, Windows]
@@ -11,13 +11,13 @@ tags: [hardware, bitlocker, encryption, Windows]
 Hey,\
 Hi friend, nice to see you again!
 
-Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key of the kingdom. Hope you enjoy.
+Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. Hope you enjoy.
 <br /><br />
 
 Some time ago, during a meeting, a client came with the following scenario: Imagine if the laptop of one of the company's VIP is lost or stolen, what could be done?\
-Although we have never researched or done anything remotely close to this, we couldn't refuse a challenge, mainly when someone dares you can't, and even if success was not possible, the knowledge gained would be interesting and valuable.
+Although we have never researched or done anything remotely close to this, we couldn't refuse a challenge (mainly when someone dares you can't), and even if success was not possible the knowledge would be interesting and valuable.
 
-This study is a hands-on approach to the excellent research ![Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi. In his post, Mr. Nurmi does a sublime job explaining how he achieved this, really recommend reading.
+This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi. In his post, Mr. Nurmi does a sublime job explaining how he achieved this, really recommend reading.
 
 Before jumping to the fun part, let's see a little about BitLocker and TPM.
 
@@ -121,19 +121,19 @@ For example, the validation process start by checking the BIOS, creating and sto
 # Avenues of attack
 
 The first boot was smooth and we were presented with the Windows login screen after a few seconds, which is good because it means the machine was not configured with pre-boot authentication.\
-After a bit of research we found the following image from the terrific work ![An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
+After a bit of research we found the following image from the terrific work [An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="50%" height="50%" alt="Volume keys attacks">
   <figcaption style="text-align: center;">Volume keys attacks - Source: [22]</figcaption>
 </figure>
 
-The "Recovery Keys" section was out-of-scope, whe didn't have access to their network nor their AD, and social engineering was denied (it always is).
+The **Recovery Keys** section was out-of-scope, whe didn't have access to their network nor their AD, and social engineering was denied (it always is).
 
-The "Stored in RAM" section had a good potential, mainly because the RAM chip was removable, but due to some constraints we decided to leave it as a second option.\
+The **Stored in RAM** section had a good potential, mainly because the RAM chip was removable, but due to some constraints we decided to leave it as a second option.\
 Why attacks to the RAM would probably work? <!--Beyond all the technical details of a cold boot attack,--> By the time the computer boots and reaches the Windows login screen, a lot already happened: TPM verified the system integrity, released the protector to decrypt the VMK, BitLocker used the plain VMK to decrypt the volume, the system was mounted and ready to the user. In the end, the VMK is decrypted and stored in plain in computer's RAM, the ideal scenario for a memory attack like the cold boot attack.
 
-The "Wrapped by TPM" section seemed quite impossible at first, but then we found the excellent research ![Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, what we decided to try first.
+The **Wrapped by TPM** section seemed quite impossible at first, but then we found the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, what we decided to try first.
 
 
 # The heist
