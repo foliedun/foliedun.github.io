@@ -56,7 +56,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 
 <figure style="display: inline-block;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="60%" height="60%" alt="BitLocker preboot with pin">
-  <figcaption style="text-align: center;">BitLocker preboot with pin - Source: [2]</figcaption>
+  <figcaption style="padding-left: -10%;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
 **Recovery scenario**, or BitLocker recovery mode, is the process by which access to a BitLocker-protected volume can be restored if the volume could not be unlocked by its default unlock mechanism. It can happen by several reasons, like: [8]
@@ -141,11 +141,11 @@ The **Wrapped by TPM** section seemed quite impossible at first, but then we fou
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="75%" height="75%" alt="Motherboard schematics">
-  <figcaption style="text-align: center;">Motherboard schematics</figcaption>
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="85%" height="85%" alt="Motherboard schematics">
+  <figcaption style="text-align: left;">Motherboard schematics</figcaption>
 
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="25%" height="25%" alt="Motherboard schematics zoom">
-  <figcaption style="text-align: center;">Motherboard schematics zoom</figcaption>
+  <figcaption style="text-align: left;">Motherboard schematics zoom</figcaption>
 </figure>
 
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
@@ -193,7 +193,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 * Purple wire: from Saleae port 3 to chip pin 5 (SI)
 
 <figure style="display: flex;">
-  <img style="padding-left: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
+  <img style="padding-right: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
   <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
   <!-- <figcaption style="text-align: center;">BIOS chip hooked</figcaption> -->
 </figure>
