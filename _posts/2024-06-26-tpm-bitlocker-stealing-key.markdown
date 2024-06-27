@@ -152,7 +152,9 @@ Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT7
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="70%" height="70%" alt="TPM chip">
   <figcaption style="text-align: left;">TPM chip</figcaption>
+</figure>
 
+<figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="70%" height="70%" alt="W25Q128JVSIQ chip">
   <figcaption style="text-align: left;">W25Q128JVSIQ chip</figcaption>
 </figure>
@@ -163,7 +165,7 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 <figure style="display: flex;">
   <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
   <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
-  <figcaption align="bottom">NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
+  <p><figcaption align="bottom">NPCT750JAAYX and W25Q128JVSIQ chips</figcaption></p>
 </figure>
 
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
