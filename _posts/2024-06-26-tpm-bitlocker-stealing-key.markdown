@@ -162,7 +162,7 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 
 <figure>
   <div style="display: flex;">
-    <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
+    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="25%" height="25%" alt="NPCT750JAAYX chip">
     <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
   </div>
   <figcaption>NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
@@ -171,7 +171,7 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="85%" height="85%" alt="GD25B127D schematics">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="85%" height="85%" alt="GD25B127D schematics">
   <figcaption style="text-align: left;">GD25B127D schematics</figcaption>
 </figure>
 
