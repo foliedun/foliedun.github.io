@@ -163,16 +163,14 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 
 <figure style="display: flex;">
   <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
-  <figcaption align="bottom">NPCT750JAAYX chip</figcaption>
-
   <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
-  <figcaption style="text-align: bottom;">W25Q128JVSIQ chip</figcaption>
+  <figcaption align="bottom">NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
 </figure>
 
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" alt="GD25B127D schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="85%" height="85%" alt="GD25B127D schematics">
   <figcaption style="text-align: left;">GD25B127D schematics</figcaption>
 </figure>
 
@@ -195,7 +193,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 <figure style="display: flex;">
   <img style="padding-right: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
   <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
-  <!-- <figcaption style="text-align: left;">BIOS chip hooked</figcaption> -->
+  <figcaption style="text-align: left;">BIOS chip hooked</figcaption>
 </figure>
 
 On the software side, we will use the free [Logic 2](https://www.saleae.com/pages/downloads) from Saleae, with the custom high-level analyzer extension [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit), which will do all the hard work for us.
@@ -203,45 +201,41 @@ On the software side, we will use the free [Logic 2](https://www.saleae.com/page
 When you open the Logic 2 with a Saleae attached you're directly redirect to the capture session screen, where we'll set device parameters, like add the digital signals from 0 to 3, change their names to relate with our pinouts (you don't have to, but helps), set the sampling rate to 250 MS/s and the voltage to 3.3+ Volts. I did some tests with different rates and voltages but these were what worked to me:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="50%" height="50%" alt="Logic 2 configured">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="70%" height="70%" alt="Logic 2 configured">
   <figcaption style="text-align: left;">Logic 2 configured</figcaption>
 </figure>
 
 Next we go to the "Extensions" tab, where we'll load the "BitLocker Key Extractor" from [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit).
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="50%" height="50%" alt="Logic 2 load extension">
-  <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
-
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="50%" height="50%" alt="Logic 2 load extension">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="70%" height="70%" alt="Logic 2 load extension">
+  <br />
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="70%" height="70%" alt="Logic 2 load extension">
   <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
 </figure>
 
 Last the "Analyzers" tab, where we'll set and configure the communication protocol (SPI) and the "BitLocker Key Extractor" extension. There's a trick here, if you remember we're capturing the TPM signals through the BIOS chip, so our CS signal is inverted for what it should be and tha's exactly what we're changing below:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="50%" height="50%" alt="Logic 2 SPI">
-  <figcaption style="text-align: left;">Logic 2 SPI</figcaption>
-  
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="50%" height="50%" alt="Logic 2 SPI configuration">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="70%" height="70%" alt="Logic 2 SPI">
+  <br />
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="70%" height="70%" alt="Logic 2 SPI configuration">
   <figcaption style="text-align: left;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
-  <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>
-  
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
+  <br />
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
   <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>  
 </figure>
 
 With everything set, we can finally capture the VMK. Press the play/capture buttom, turn on the laptop, wait and pray (and don't forget to stop the capturing when Windows finishes booting). If everything run as expected you'll get the **VMK in hex**:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
-  <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>
-  
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" width="70%" height="70%" alt="Logic 2 capturing VMK">
+  <br />
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" width="70%" height="70%" alt="Logic 2 capturing VMK">
   <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>  
 </figure>
 
