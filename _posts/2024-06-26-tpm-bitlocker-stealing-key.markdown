@@ -55,7 +55,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Active Directory Domain Services (AD DS) account: Uses domain authentication to unlock data volumes. Operating system volumes cannot use this type of key protector.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="70%" height="70%" alt="BitLocker preboot with pin">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="60%" height="60%" alt="BitLocker preboot with pin">
   <figcaption style="text-align: center;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 * Exceeding the maximum allowed number of failed sign-in attempts
 
 <figure style="display: table;">
-  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="70%" height="70%" alt="BitLocker recovery mode">
+  <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="60%" height="60%" alt="BitLocker recovery mode">
   <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ The first boot was smooth and we were presented with the Windows login screen af
 After a bit of research we found the following image from the terrific work [An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="50%" height="50%" alt="Volume keys attacks">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="60%" height="60%" alt="Volume keys attacks">
   <figcaption style="text-align: center;">Volume keys attacks - Source: [22]</figcaption>
 </figure>
 
@@ -141,17 +141,17 @@ The **Wrapped by TPM** section seemed quite impossible at first, but then we fou
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="70%" height="70%" alt="Motherboard schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="50%" height="50%" alt="Motherboard schematics">
   <figcaption style="text-align: center;">Motherboard schematics</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="10%" height="10%" alt="Motherboard schematics zoom">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="40%" height="40%" alt="Motherboard schematics zoom">
   <figcaption style="text-align: center;">Motherboard schematics zoom</figcaption>
 </figure>
 
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" alt="TPM chip">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="70%" height="70%" alt="TPM chip">
   <figcaption style="text-align: center;">TPM chip</figcaption>
 
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="70%" height="70%" alt="W25Q128JVSIQ chip">
@@ -161,7 +161,7 @@ Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT7
 Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentially, our **TPM chip communicates with the CPU by a SPI bus shared with the BIOS chip**.\
 But why this is so amazing? Because if we take a look in this TPM chip we will see it's of type QFN-32, which makes contact with its pins much much harder. The BIOS chip, on the other hand, is usually much bigger and with pins much easier to be hooked, and **because they share the same SPI bus we can sniff the CPU-TPM communication by hooking the BIOS**. Simply fantastic!
 
-<figure style="display: inline-block;">
+<figure style="display: flex;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="30%" height="30%" alt="NPCT750JAAYX chip">
   <figcaption style="text-align: center;">NPCT750JAAYX chip</figcaption>
 
