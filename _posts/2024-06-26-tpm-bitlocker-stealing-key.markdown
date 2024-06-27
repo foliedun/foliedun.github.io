@@ -141,7 +141,7 @@ The **Wrapped by TPM** section seemed quite impossible at first, but then we fou
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="85%" height="85%" alt="Motherboard schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" alt="Motherboard schematics">
   <figcaption style="text-align: left;">Motherboard schematics</figcaption>
 
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="25%" height="25%" alt="Motherboard schematics zoom">
@@ -172,7 +172,7 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="50%" height="50%" alt="GD25B127D schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" alt="GD25B127D schematics">
   <figcaption style="text-align: left;">GD25B127D schematics</figcaption>
 </figure>
 
