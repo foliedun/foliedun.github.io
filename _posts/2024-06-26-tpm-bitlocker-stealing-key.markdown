@@ -193,8 +193,8 @@ By using the schematics above, and the small dot in both schematic and chip as a
 * Purple wire: from Saleae port 3 to chip pin 5 (SI)
 
 <figure style="display: flex;">
-  <img align="left" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
-  <img align="right" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="42%" height="42%" alt="BIOS chip hooked">
+  <img style="padding-left: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
   <!-- <figcaption style="text-align: center;">BIOS chip hooked</figcaption> -->
 </figure>
 
