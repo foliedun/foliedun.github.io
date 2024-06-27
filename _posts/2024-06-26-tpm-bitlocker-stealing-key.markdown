@@ -56,7 +56,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 
 <figure style="display: inline-block;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="60%" height="60%" alt="BitLocker preboot with pin">
-  <figcaption style="padding-left: -10%;">BitLocker preboot with pin - Source: [2]</figcaption>
+  <figcaption style="padding-left: -10px;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
 **Recovery scenario**, or BitLocker recovery mode, is the process by which access to a BitLocker-protected volume can be restored if the volume could not be unlocked by its default unlock mechanism. It can happen by several reasons, like: [8]
