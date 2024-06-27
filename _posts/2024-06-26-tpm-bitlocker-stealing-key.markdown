@@ -192,6 +192,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 * Blue wire: from Saleae port 2 to chip pin 6 (SCLK)
 * Purple wire: from Saleae port 3 to chip pin 5 (SI)
 
+<!--
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="50%" height="50%" alt="BIOS chip hooked">
   <figcaption style="text-align: center;">BIOS chip hooked</figcaption>
@@ -199,6 +200,10 @@ By using the schematics above, and the small dot in both schematic and chip as a
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="50%" height="50%" alt="BIOS chip hooked">
   <figcaption style="text-align: center;">BIOS chip hooked</figcaption>
 </figure>
+-->
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Image1]({{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg)  |  ![Image2]({{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg)
 
 On the software side, we will use the free [Logic 2](https://www.saleae.com/pages/downloads) from Saleae, with the custom high-level analyzer extension [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit), which will do all the hard work for us.
 
