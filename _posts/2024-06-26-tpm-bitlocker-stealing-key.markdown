@@ -143,8 +143,6 @@ If we want to attack the TPM, we first need to find the TPM, and to this we need
 <figure style="display: flex;">
   <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="74%" height="74%" alt="Motherboard schematics">
   <img src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="24%" height="24%" alt="Motherboard schematics zoom">
-  <br />
-  <figcaption style="text-align: right;">Motherboard schematics</figcaption>
 </figure>
 
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
@@ -162,10 +160,12 @@ Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT7
 Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentially, our **TPM chip communicates with the CPU by a SPI bus shared with the BIOS chip**.\
 But why this is so amazing? Because if we take a look in this TPM chip we will see it's of type QFN-32, which makes contact with its pins much much harder. The BIOS chip, on the other hand, is usually much bigger and with pins much easier to be hooked, and **because they share the same SPI bus we can sniff the CPU-TPM communication by hooking the BIOS**. Simply fantastic!
 
-<figure style="display: flex;">
-  <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
-  <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
-  <p><figcaption align="bottom">NPCT750JAAYX and W25Q128JVSIQ chips</figcaption></p>
+<figure>
+  <div style="display: flex;">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
+  </div>
+  <figcaption>NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
 </figure>
 
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
