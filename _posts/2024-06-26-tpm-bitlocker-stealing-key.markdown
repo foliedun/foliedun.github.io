@@ -194,7 +194,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 
 <figure style="display: flex;">
   <img align="left" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
-  <img align="right" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="45%" height="45%" alt="BIOS chip hooked">
+  <img align="right" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="42%" height="42%" alt="BIOS chip hooked">
   <!-- <figcaption style="text-align: center;">BIOS chip hooked</figcaption> -->
 </figure>
 
