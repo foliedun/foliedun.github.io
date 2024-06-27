@@ -36,7 +36,7 @@ Briefly, the volume's raw data is encrypted with a **Full Volume Encryption Key 
 
 <figure style="display: inline-block;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-keys.png" alt="BitLocker keys">
-  <figcaption style="text-align: center;">BitLocker keys - Source: [20]</figcaption>
+  <figcaption style="text-align: left;">BitLocker keys - Source: [20]</figcaption>
 </figure>
 
 You may be thinking "why use this three-key-schema? Why do not directly encrypt the FVEK with the key protectors?". Simple, in the case of any of the key protectors is compromised, corrupted or changed, all key protectors can be replaced and only a new VMK will have to be created, the FVEK will not change and the encrypted volume will not have to be reencrypted.
@@ -56,7 +56,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 
 <figure style="display: inline-block;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/preboot-pin.png" width="60%" height="60%" alt="BitLocker preboot with pin">
-  <figcaption style="padding-left: -10px;">BitLocker preboot with pin - Source: [2]</figcaption>
+  <figcaption style="text-align: left;">BitLocker preboot with pin - Source: [2]</figcaption>
 </figure>
 
 **Recovery scenario**, or BitLocker recovery mode, is the process by which access to a BitLocker-protected volume can be restored if the volume could not be unlocked by its default unlock mechanism. It can happen by several reasons, like: [8]
@@ -74,7 +74,7 @@ Ok, but what the heck is key protectors and recovery scenarios?
 
 <figure style="display: table;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/bitlocker-recovery.png" width="60%" height="60%" alt="BitLocker recovery mode">
-  <figcaption style="text-align: center;">BitLocker recovery mode - Source: [8]</figcaption>
+  <figcaption style="text-align: left;">BitLocker recovery mode - Source: [8]</figcaption>
 </figure>
 
 
@@ -92,7 +92,7 @@ Trusted Platform Module (TPM) is an international standard (ISO/IEC 11889) to ha
 
 <figure style="display: inline-block;">
   <img style="vertical-align: center;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-internal.png" alt="TPM internal functions">
-  <figcaption style="text-align: center;">TPM internal functions - Source: [10]</figcaption>
+  <figcaption style="text-align: left;">TPM internal functions - Source: [10]</figcaption>
 </figure>
 
 What if my computer does not have a separated TPM chip? No worries, it's been a long time since Intel and AMD had embedded its microprocessors with TPM functionalities, a technology known as "integrated TPM" or "CPU-based TPM". On the blue side, Intel states that its processors, since 8th generation (Coffee Lake), have an integrated TPM that adheres to the 2.0 specifications and offers the same capabilities of a discrete TPM, but residing in system’s firmware, known as Intel PTT (Platform Trust Technology)[9]. On the red side, information is a little more dispersed, but several unofficial sources claim that AMD processors have a TPM implementation since Ryzen Zen 1, known as AMD fTPM (firmware TPM).
@@ -114,7 +114,7 @@ For example, the validation process start by checking the BIOS, creating and sto
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/tpm-hierarchy.png" alt="TPM keys hierarchy">
-  <figcaption style="text-align: center;">TPM keys hierarchy - Source: [21]</figcaption>
+  <figcaption style="text-align: left;">TPM keys hierarchy - Source: [21]</figcaption>
 </figure>
 
 
@@ -125,7 +125,7 @@ After a bit of research we found the following image from the terrific work [An 
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="60%" height="60%" alt="Volume keys attacks">
-  <figcaption style="text-align: center;">Volume keys attacks - Source: [22]</figcaption>
+  <figcaption style="text-align: left;">Volume keys attacks - Source: [22]</figcaption>
 </figure>
 
 The **Recovery Keys** section was out-of-scope, whe didn't have access to their network nor their AD, and social engineering was denied (it always is).
@@ -152,10 +152,10 @@ Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT7
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="70%" height="70%" alt="TPM chip">
-  <figcaption style="text-align: center;">TPM chip</figcaption>
+  <figcaption style="text-align: left;">TPM chip</figcaption>
 
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="70%" height="70%" alt="W25Q128JVSIQ chip">
-  <figcaption style="text-align: center;">W25Q128JVSIQ chip</figcaption>
+  <figcaption style="text-align: left;">W25Q128JVSIQ chip</figcaption>
 </figure>
 
 Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentially, our **TPM chip communicates with the CPU by a SPI bus shared with the BIOS chip**.\
@@ -173,7 +173,7 @@ What can happen is that the actual BIOS chip in the motherboard is from a differ
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="50%" height="50%" alt="GD25B127D schematics">
-  <figcaption style="text-align: center;">GD25B127D schematics</figcaption>
+  <figcaption style="text-align: left;">GD25B127D schematics</figcaption>
 </figure>
 
 Now comes the expensive part. Theoretically, to the spoofing, we would require a logic analyzer capable of recording four logic signals simultaneously at a sampling rate of 100MHz. I say theoretically because the sampling rate of 100MHz is due to the theoretical average speed of SPI, however, as we'll see later on, we ended up needing much more than this, so beware when buying a logic analyzer different from the one used here. Nevertheless, we'll use a [Saleae Logic Pro 8](https://www.saleae.com/products/saleae-logic-pro-8) (told it would be expensive).\
@@ -195,7 +195,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 <figure style="display: flex;">
   <img style="padding-right: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
   <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
-  <!-- <figcaption style="text-align: center;">BIOS chip hooked</figcaption> -->
+  <!-- <figcaption style="text-align: left;">BIOS chip hooked</figcaption> -->
 </figure>
 
 On the software side, we will use the free [Logic 2](https://www.saleae.com/pages/downloads) from Saleae, with the custom high-level analyzer extension [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit), which will do all the hard work for us.
@@ -204,45 +204,45 @@ When you open the Logic 2 with a Saleae attached you're directly redirect to the
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="50%" height="50%" alt="Logic 2 configured">
-  <figcaption style="text-align: center;">Logic 2 configured</figcaption>
+  <figcaption style="text-align: left;">Logic 2 configured</figcaption>
 </figure>
 
 Next we go to the "Extensions" tab, where we'll load the "BitLocker Key Extractor" from [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit).
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="50%" height="50%" alt="Logic 2 load extension">
-  <figcaption style="text-align: center;">Logic 2 load extension</figcaption>
+  <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
 
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="50%" height="50%" alt="Logic 2 load extension">
-  <figcaption style="text-align: center;">Logic 2 load extension</figcaption>
+  <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
 </figure>
 
 Last the "Analyzers" tab, where we'll set and configure the communication protocol (SPI) and the "BitLocker Key Extractor" extension. There's a trick here, if you remember we're capturing the TPM signals through the BIOS chip, so our CS signal is inverted for what it should be and tha's exactly what we're changing below:
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="50%" height="50%" alt="Logic 2 SPI">
-  <figcaption style="text-align: center;">Logic 2 SPI</figcaption>
+  <figcaption style="text-align: left;">Logic 2 SPI</figcaption>
   
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="50%" height="50%" alt="Logic 2 SPI configuration">
-  <figcaption style="text-align: center;">Logic 2 SPI configuration</figcaption>  
+  <figcaption style="text-align: left;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
-  <figcaption style="text-align: center;">Logic 2 bitlocker extractor</figcaption>
+  <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>
   
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="50%" height="50%" alt="Logic 2 bitlocker extractor">
-  <figcaption style="text-align: center;">Logic 2 bitlocker extractor</figcaption>  
+  <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>  
 </figure>
 
 With everything set, we can finally capture the VMK. Press the play/capture buttom, turn on the laptop, wait and pray (and don't forget to stop the capturing when Windows finishes booting). If everything run as expected you'll get the **VMK in hex**:
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
-  <figcaption style="text-align: center;">Logic 2 capturing VMK</figcaption>
+  <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>
   
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" width="50%" height="50%" alt="Logic 2 capturing VMK">
-  <figcaption style="text-align: center;">Logic 2 capturing VMK</figcaption>  
+  <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>  
 </figure>
 
 With the VMK in hands we have two options: boot the laptop with a USB live Linux, like Ubuntu, or steal the HD/SSD and connect it to another machine with Linux. For the sake of simplicity we'll boot into a Ubuntu and mount the encrypted volume. To this we'll use the "xxd" command to convert the VMK from hex to binary, the "dislocker" tool to decrypt the volume and the "mount" command to mount the decrypted volume:
@@ -255,7 +255,7 @@ $ sudo mount -t ntfs-3g -o loop /mnt/dec/dislocker-file /mnt/win/
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mount_volume.jpg" width="50%" height="50%" alt="Mounting decrypted volume">
-  <figcaption style="text-align: center;">Mounting decrypted volume</figcaption>
+  <figcaption style="text-align: left;">Mounting decrypted volume</figcaption>
 </figure>
 
 The volume is now decrypted and accessible. Let's enjoy this moment together for a bit before continuing.
