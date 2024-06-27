@@ -140,9 +140,12 @@ The **Wrapped by TPM** section seemed quite impossible at first, but then we fou
 
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
-<figure style="display: flex;">
-  <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="74%" height="74%" alt="Motherboard schematics">
-  <img src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="24%" height="24%" alt="Motherboard schematics zoom">
+<figure>
+  <div style="display: flex;">
+    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="74%" height="74%" alt="Motherboard schematics">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="24%" height="24%" alt="Motherboard schematics zoom">
+  </div>
+  <figcaption style="text-align: left;">Motherboard schematics</figcaption>
 </figure>
 
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
@@ -191,9 +194,11 @@ By using the schematics above, and the small dot in both schematic and chip as a
 * Blue wire: from Saleae port 2 to chip pin 6 (SCLK)
 * Purple wire: from Saleae port 3 to chip pin 5 (SI)
 
-<figure style="display: flex;">
-  <img style="padding-right: 10px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
-  <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
+<figure>
+  <div style="display: flex;">
+    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
+  </div>
   <figcaption style="text-align: left;">BIOS chip hooked</figcaption>
 </figure>
 
