@@ -143,6 +143,7 @@ If we want to attack the TPM, we first need to find the TPM, and to this we need
 <figure style="display: flex;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="75%" height="75%" alt="Motherboard schematics">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="25%" height="25%" alt="Motherboard schematics zoom">
+  <br />
   <figcaption style="text-align: left;">Motherboard schematics</figcaption>
 </figure>
 
