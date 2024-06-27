@@ -209,7 +209,9 @@ Next we go to the "Extensions" tab, where we'll load the "BitLocker Key Extracto
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="70%" height="70%" alt="Logic 2 load extension">
-  <br />
+</figure>
+
+<figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="70%" height="70%" alt="Logic 2 load extension">
   <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
 </figure>
@@ -218,14 +220,18 @@ Last the "Analyzers" tab, where we'll set and configure the communication protoc
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="70%" height="70%" alt="Logic 2 SPI">
-  <br />
+</figure>
+
+<figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="70%" height="70%" alt="Logic 2 SPI configuration">
   <figcaption style="text-align: left;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
-  <br />
+</figure>
+
+<figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
   <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>  
 </figure>
