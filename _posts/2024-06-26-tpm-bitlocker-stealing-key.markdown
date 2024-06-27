@@ -261,7 +261,7 @@ With everything set, we can finally capture the VMK. Press the play/capture butt
   <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>  
 </figure>
 
-With the VMK in hands we have two options: boot the laptop with a USB live Linux, like Ubuntu, or steal the HD/SSD and connect it to another machine with Linux. For the sake of simplicity we'll boot into a Ubuntu and mount the encrypted volume. To this we'll use the "xxd" command to convert the VMK from hex to binary, the "dislocker" tool to decrypt the volume and the "mount" command to mount the decrypted volume:
+With the VMK in hands we have two options: boot the laptop with a USB live Linux, like Ubuntu, or remove the HD/SSD and connect it to another machine with Linux. For the sake of simplicity we'll boot into a Ubuntu and mount the encrypted volume. To this we'll use the "xxd" command to convert the VMK from hex to binary, the "dislocker" tool to decrypt the volume and the "mount" command to mount the decrypted volume:
 
 ```bash
 $ echo "449387debd4edbbc9b191c03db9641d0ad7e57f901665f06916e3020399f3483" | xxd -r -p > vmk
