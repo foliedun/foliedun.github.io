@@ -239,8 +239,6 @@ Here is where naming the signal lines at the beginning comes in handy, also, we 
   <figcaption style="text-align: left;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
-<br />
-
 <figure style="display: inline-block;">
   <img src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
 </figure>
@@ -275,22 +273,21 @@ $ sudo mount -t ntfs-3g -o loop /mnt/dec/dislocker-file /mnt/win/
 </figure>
 
 The volume is now decrypted and accessible. Let's enjoy this moment together for a bit before continuing.
-<br /><br /><br /><br />
+<br /><br /><br /><br /><br />
 
-The volume is accessible but in read-only mode, this is because Windows 10/11 have a default feature (Fast Startup) that it enters in a hibernation state-style even when the user requests a shutdown. If you want to force the read-write mode you have issue the mount command like below: 
+The volume is accessible but in read-only mode, this is because Windows 10/11 have a default feature (Fast Startup) that it enters in a hibernation state-style even when the user requests a shutdown. If you want to force the read-write mode you have to issue the mount command as below: 
 
 ```bash
 $ sudo mount -t ntfs-3g -o loop,remove_hiberfile,rw /mnt/dec/dislocker-file /mnt/win/
 ```
 
-If it does not work, issue the following command before the mount:
+If it does not work, you can try the following command before the mount:
 
 ```bash
 $ sudo ntfsfix /mnt/dec/dislocker-file
 ```
 
-If it doesn't work either then google is your friend because I have no idea. Nevertheless this approach is not recommended as it may lose data or even corrupt something.
-<br /><br />
+If it still doesn't work then google is your friend because I have no idea. Nevertheless this approach is not recommended as it may lose data or even corrupt something.
 
 
 # Remediation
@@ -300,7 +297,7 @@ Regardless the presence or absence of the TPM chip, a pre-boot authentication wi
 
 # Final considerations
 
-That's all friends, if you got so far thank you for your time and see again soon.
+That's all friends, if you got so far thank you for your time and see you again soon.
 
 
 # References
