@@ -165,8 +165,8 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 
 <figure>
   <div style="display: flex;">
-    <img style="padding-right: 20px;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="25%" height="25%" alt="NPCT750JAAYX chip">
-    <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
+    <img style="padding-right: 20px;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="15%" height="15%" alt="W25Q128JVSIQ chip">
   </div>
   <figcaption>NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
 </figure>
