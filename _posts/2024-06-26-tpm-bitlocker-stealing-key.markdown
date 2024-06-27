@@ -141,10 +141,10 @@ The **Wrapped by TPM** section seemed quite impossible at first, but then we fou
 If we want to attack the TPM, we first need to find the TPM, and to this we need the motherboard schematics of the machine:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="50%" height="50%" alt="Motherboard schematics">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="75%" height="75%" alt="Motherboard schematics">
   <figcaption style="text-align: center;">Motherboard schematics</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="40%" height="40%" alt="Motherboard schematics zoom">
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="25%" height="25%" alt="Motherboard schematics zoom">
   <figcaption style="text-align: center;">Motherboard schematics zoom</figcaption>
 </figure>
 
@@ -162,11 +162,11 @@ Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentia
 But why this is so amazing? Because if we take a look in this TPM chip we will see it's of type QFN-32, which makes contact with its pins much much harder. The BIOS chip, on the other hand, is usually much bigger and with pins much easier to be hooked, and **because they share the same SPI bus we can sniff the CPU-TPM communication by hooking the BIOS**. Simply fantastic!
 
 <figure style="display: flex;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="30%" height="30%" alt="NPCT750JAAYX chip">
-  <figcaption style="text-align: center;">NPCT750JAAYX chip</figcaption>
+  <img src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="20%" height="20%" alt="NPCT750JAAYX chip">
+  <figcaption align="bottom">NPCT750JAAYX chip</figcaption>
 
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="30%" height="30%" alt="W25Q128JVSIQ chip">
-  <figcaption style="text-align: center;">W25Q128JVSIQ chip</figcaption>
+  <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
+  <figcaption style="text-align: bottom;">W25Q128JVSIQ chip</figcaption>
 </figure>
 
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
