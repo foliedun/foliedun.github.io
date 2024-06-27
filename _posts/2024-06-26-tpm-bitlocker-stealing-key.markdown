@@ -121,7 +121,7 @@ For example, the validation process start by checking the BIOS, creating and sto
 # Avenues of attack
 
 The first boot was smooth and we were presented with the Windows login screen after a few seconds, which is good because it means the machine was not configured with pre-boot authentication.\
-After a bit of research we found the following image from the terrific work [An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, that gave us a north direction:
+After a bit of research we found the following image from the terrific work [An ice-cold boot to break bit locker](https://www.slideshare.net/MSbluehat/bluehat-v18-an-icecold-boot-to-break-bit-locker) by Olle Segerdahl & Pasi Saarinen, which gave us a north:
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/volume-attacks.png" width="60%" height="60%" alt="Volume keys attacks">
@@ -142,8 +142,8 @@ If we want to attack the TPM, we first need to find the TPM, and to this we need
 
 <figure>
   <div style="display: flex;">
-    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="74%" height="74%" alt="Motherboard schematics">
-    <img src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="24%" height="24%" alt="Motherboard schematics zoom">
+    <img style="padding-right: 20px;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics1.png" width="70%" height="70%" alt="Motherboard schematics">
+    <img src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics2.png" width="22%" height="22%" alt="Motherboard schematics zoom">
   </div>
   <figcaption style="text-align: left;">Motherboard schematics</figcaption>
 </figure>
@@ -151,13 +151,13 @@ If we want to attack the TPM, we first need to find the TPM, and to this we need
 Great, our machine not only have a dedicated TPM chip (*TPM1.2/2.0 Nuvoton NPCT750JAAYX*) but also communicates with the CPU by a SPI bus shared with other chip (*W25Q128JVSIQ*). The schematic also have details about these chips:
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="70%" height="70%" alt="TPM chip">
-  <figcaption style="text-align: left;">TPM chip</figcaption>
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics3.png" width="70%" height="70%" alt="TPM chip schematic">
+  <figcaption style="text-align: left;">TPM chip schematic</figcaption>
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="70%" height="70%" alt="W25Q128JVSIQ chip">
-  <figcaption style="text-align: left;">W25Q128JVSIQ chip</figcaption>
+  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/mobo-schematics4.png" width="70%" height="70%" alt="W25Q128JVSIQ chip schematic">
+  <figcaption style="text-align: left;">W25Q128JVSIQ chip schematic</figcaption>
 </figure>
 
 Wait, 128Mb Flash ROM? YES! We're talking about the BIOS chip here! So, essentially, our **TPM chip communicates with the CPU by a SPI bus shared with the BIOS chip**.\
@@ -165,7 +165,7 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 
 <figure>
   <div style="display: flex;">
-    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="25%" height="25%" alt="NPCT750JAAYX chip">
+    <img style="padding-right: 20px;" src="{{site.baseurl}}/assets/img/bitlocker/NPCT750JAAYX.png" width="25%" height="25%" alt="NPCT750JAAYX chip">
     <img src="{{site.baseurl}}/assets/img/bitlocker/W25Q128JVSIQ.png" width="20%" height="20%" alt="W25Q128JVSIQ chip">
   </div>
   <figcaption>NPCT750JAAYX and W25Q128JVSIQ chips</figcaption>
@@ -174,20 +174,20 @@ But why this is so amazing? Because if we take a look in this TPM chip we will s
 What can happen is that the actual BIOS chip in the motherboard is from a different brand than the one in the schematics, but no worries, they should be quite identical. In our case we have a "GIGADEVICE GD25B127D", and the schematics of both are identical:
 
 <figure style="display: inline-block;">
-  <img src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="85%" height="85%" alt="GD25B127D schematics">
-  <figcaption style="text-align: left;">GD25B127D schematics</figcaption>
+  <img src="{{site.baseurl}}/assets/img/bitlocker/GD25B127D-schematics0.png" width="85%" height="85%" alt="GD25B127D pin description">
+  <figcaption style="text-align: left;">GD25B127D pin description</figcaption>
 </figure>
 
-Now comes the expensive part. Theoretically, to the spoofing, we would require a logic analyzer capable of recording four logic signals simultaneously at a sampling rate of 100MHz. I say theoretically because the sampling rate of 100MHz is due to the theoretical average speed of SPI, however, as we'll see later on, we ended up needing much more than this, so beware when buying a logic analyzer different from the one used here. Nevertheless, we'll use a [Saleae Logic Pro 8](https://www.saleae.com/products/saleae-logic-pro-8) (told it would be expensive).\
-Both Arduino and Raspberry Pi have projects to transform them into a logic analyzer, so they can come in hand for future projects, but not in here. 
+Now comes the expensive part. To do the spoofing we'll need a logic analyzer capable of recording four logic signals simultaneously at a sampling rate of at least 100MHz, but beware, this base value to the sampling rate is purely theoretical due to the average speed of SPI (25MHz), however we ended up needing much more than this (250Mhz), so pay attention when buying a logic analyzer different from the one used here. Nevertheless, we'll use a [Saleae Logic Pro 8](https://www.saleae.com/products/saleae-logic-pro-8) (told it would be expensive).\
+And as a side note: both Arduino and Raspberry Pi have projects to transform them into a logic analyzer, so they can come in hand for future projects, but not in here. 
 
 Finally hooking some wires, but how? Well, SPI communicates through four logic signals:
-* CS (Chip Select): Line used by the Master to indicate which Slave he's communicating with. This is the only line that cannot be shared between Slaves, with each one having a separated CS line to the Master
-* SCLK/CLK (Serial Clock): Line used by the Master to indicate the communication clock to the Slave
-* MOSI (Master Out Slave In): Line used to transfer data from Master to Slave
-* MISO (Master In Slave Out): Line used to transfer data from Slave to Master
+* **CS (Chip Select)**: Used by the Master to indicate which Slave he's communicating with. This is the only line that cannot be shared between Slaves, with each one having a separated CS line to the Master
+* **SCLK/CLK (Serial Clock)**: Used by the Master to indicate the communication clock to the Slave
+* **MOSI (Master Out Slave In)**: Used to transfer data from Master to Slave
+* **MISO (Master In Slave Out)**: Used to transfer data from Slave to Master
 
-By using the schematics above, and the small dot in both schematic and chip as a guide, the hooking looks like this:
+Using the schematics above the hooking will look like this:
 * Yellow wire: from Saleae port 0 to chip pin 1 (CS)
 * Green wire: from Saleae port 1 to chip pin 2 (SO)
 * Black wire: from Saleae port "ground" to chip pin 4 (VSS)
@@ -196,7 +196,7 @@ By using the schematics above, and the small dot in both schematic and chip as a
 
 <figure>
   <div style="display: flex;">
-    <img style="padding-right: 15px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
+    <img style="padding-right: 20px;" src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked1.jpg" width="35%" height="35%" alt="BIOS chip hooked">
     <img src="{{site.baseurl}}/assets/img/bitlocker/BIOS-chip-hooked2.jpg" width="43%" height="43%" alt="BIOS chip hooked">
   </div>
   <figcaption style="text-align: left;">BIOS chip hooked</figcaption>
@@ -204,49 +204,59 @@ By using the schematics above, and the small dot in both schematic and chip as a
 
 On the software side, we will use the free [Logic 2](https://www.saleae.com/pages/downloads) from Saleae, with the custom high-level analyzer extension [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit), which will do all the hard work for us.
 
-When you open the Logic 2 with a Saleae attached you're directly redirect to the capture session screen, where we'll set device parameters, like add the digital signals from 0 to 3, change their names to relate with our pinouts (you don't have to, but helps), set the sampling rate to 250 MS/s and the voltage to 3.3+ Volts. I did some tests with different rates and voltages but these were what worked to me:
+When you open the Logic 2 with a Saleae attached you're directly redirect to the capture session screen, where we'll set some device parameters for the capture:
+* Add the digital signals from 0 to 3
+* Change signal names to relate with our pinouts (you don't have to, but helps)
+* Set the sampling rate to 250 MS/s
+* Set the voltage to 3.3+ Volts.
+I did some tests with different sampling rates and voltages but these were what worked to me.
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="70%" height="70%" alt="Logic 2 configured">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/logic2_main_page2.png" width="70%" height="70%" alt="Logic 2 configured">
   <figcaption style="text-align: left;">Logic 2 configured</figcaption>
 </figure>
 
-Next we go to the "Extensions" tab, where we'll load the "BitLocker Key Extractor" from [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit).
+Next we go to the "Extensions" tab where we'll load the "BitLocker Key Extractor" from [bitlocker-spi-toolkit](https://github.com/WithSecureLabs/bitlocker-spi-toolkit).
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="70%" height="70%" alt="Logic 2 load extension">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension1.png" width="70%" height="70%" alt="Logic 2 load extension">
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="70%" height="70%" alt="Logic 2 load extension">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/logic2_extension2.png" width="70%" height="70%" alt="Logic 2 load extension">
   <figcaption style="text-align: left;">Logic 2 load extension</figcaption>
 </figure>
 
-Last the "Analyzers" tab, where we'll set and configure the communication protocol (SPI) and the "BitLocker Key Extractor" extension. There's a trick here, if you remember we're capturing the TPM signals through the BIOS chip, so our CS signal is inverted for what it should be and tha's exactly what we're changing below:
+Last the "Analyzers" tab where we'll set and configure the communication protocol (SPI) and the "BitLocker Key Extractor" extension.\
+Here is where naming the signal lines at the beginning comes in handy, also, we need to adjust the "Enable line" option. As you may remember, we're capturing the TPM signals through the BIOS chip so our CS signal is inverted.
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi1.png" width="70%" height="70%" alt="Logic 2 SPI">
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2ssdf.png" width="70%" height="70%" alt="Logic 2 SPI configuration">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/Logic2_spi2.png" width="70%" height="70%" alt="Logic 2 SPI configuration">
   <figcaption style="text-align: left;">Logic 2 SPI configuration</figcaption>  
 </figure>
 
+<br />
+
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
+  <img src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker1.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
 </figure>
 
 <figure style="display: inline-block;">
-  <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
-  <figcaption style="text-align: left;">Logic 2 bitlocker extractor</figcaption>  
+  <img src="{{site.baseurl}}/assets/img/bitlocker/Logic2_bitlocker2.png" width="70%" height="70%" alt="Logic 2 bitlocker extractor">
+  <figcaption style="text-align: left;">Logic 2 bitlocker extractor configuration</figcaption>  
 </figure>
 
 With everything set, we can finally capture the VMK. Press the play/capture buttom, turn on the laptop, wait and pray (and don't forget to stop the capturing when Windows finishes booting). If everything run as expected you'll get the **VMK in hex**:
 
 <figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture1.png" width="70%" height="70%" alt="Logic 2 capturing VMK">
-  <br />
+</figure>
+
+<figure style="display: inline-block;">
   <img style="vertical-align: top;" src="{{site.baseurl}}/assets/img/bitlocker/logic2_capture2.png" width="70%" height="70%" alt="Logic 2 capturing VMK">
   <figcaption style="text-align: left;">Logic 2 capturing VMK</figcaption>  
 </figure>
