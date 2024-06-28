@@ -21,7 +21,10 @@ This study is a hands-on approach to the excellent research [Sniff, there leaks 
 
 Before jumping to the fun part, let's see a little about BitLocker and TPM.
 
+# Table of contents
+1. [BitLocker](#BitLocker)
 
+<a name="BitLocker"></a>
 # BitLocker 
 
 BitLocker is a Windows security feature present since Windows Vista/Server 2008 that provides encryption for entire volumes/disks. It was implemented to address the growing concern of data theft in case of physical access to the disk, like in stolen or lost laptops and hard drives.
