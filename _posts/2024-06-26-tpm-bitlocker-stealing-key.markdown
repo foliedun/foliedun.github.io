@@ -130,7 +130,7 @@ After a bit of research we found the following image from the terrific work [An 
 The **Recovery Keys** section was out-of-scope, whe didn't have access to their network nor their AD, and social engineering was denied (it always is).
 
 The **Stored in RAM** section had a good potential, mainly because the RAM chip was removable, but due to some constraints we decided to leave it as a second option.\
-Why attacks to the RAM would probably work? <!--Beyond all the technical details of a cold boot attack,--> By the time the computer boots and reaches the Windows login screen, a lot already happened: TPM verified the system integrity, released the protector to decrypt the VMK, BitLocker used the plain VMK to decrypt the volume, the system was mounted and ready to the user. In the end, the VMK is decrypted and stored in plain in computer's RAM, the ideal scenario for a memory attack like the cold boot attack.
+But why attacks to the RAM would probably work if the key is stored in the TPM? By the time the computer boots and reaches the Windows login screen, a lot already happened: TPM verified the system integrity, released the protector to decrypt the VMK, BitLocker used the plain VMK to decrypt the volume, the system was mounted and ready to the user. In the end, the VMK is decrypted and stored in plain in computer's RAM, the ideal scenario for a memory attack like the cold boot attack.
 
 The **Wrapped by TPM** section seemed quite impossible at first, but then we found the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, what we decided to try first.
 
