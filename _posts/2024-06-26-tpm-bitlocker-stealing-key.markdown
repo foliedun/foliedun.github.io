@@ -186,7 +186,7 @@ Finally hooking some wires, but how? Well, SPI communicates through four logic s
 * **MOSI (Master Out Slave In)**: Used to transfer data from Master to Slave
 * **MISO (Master In Slave Out)**: Used to transfer data from Slave to Master
 
-Using the schematics above the hooking will look like this:
+Using the schematics above our hook ended up like this:
 * Yellow wire: from Saleae port 0 to chip pin 1 (CS)
 * Green wire: from Saleae port 1 to chip pin 2 (SO)
 * Black wire: from Saleae port "ground" to chip pin 4 (VSS)
