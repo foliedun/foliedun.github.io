@@ -11,13 +11,7 @@ tags: [hardware, bitlocker, encryption, Windows]
 Hey,\
 Hi friend, nice to see you again!
 
-Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. Hope you enjoy.
-<br /><br />
-
-Some time ago, during a meeting, a client came with the following scenario: Imagine if the laptop of one of the company's VIPs is lost or stolen, what could be done?\
-Of course things wouldn't be easy and some security features were implemented, including a full disk encryption. Although we have never researched or done anything remotely close to this, we couldn't refuse a challenge (mainly when someone dares you can't), and even if success was not possible the knowledge would be interesting and valuable.
-
-This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, really recommend reading it.
+Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, hope you enjoy.
 
 Before jumping to the fun part, let's see a little about BitLocker and TPM.
 
