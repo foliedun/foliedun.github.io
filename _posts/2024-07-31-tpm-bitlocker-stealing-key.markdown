@@ -10,6 +10,7 @@ tags: [hardware, bitlocker, encryption, Windows]
 
 Hey,\
 Hi friend, nice to see you again!
+<br />
 
 Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, hope you enjoy.
 
