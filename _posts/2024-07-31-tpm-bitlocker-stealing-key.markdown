@@ -12,7 +12,10 @@ Hey,\
 Hi friend, nice to see you again!
 <br /><br />
 
-Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, hope you enjoy.
+My laptop has been an important part of my life since college, and I bet I'm not alone, but have you ever thought about what could happen if your laptop was lost or stolen?
+At a personal level, your digital life, such as social medias, bank accounts and private things, could be accesed and leaked online. At a corporate level, the entire network of your company could be at risk.
+
+To protect our privacy and avoid such extreme cases, full disk encryption is an important security measure and implemented in most modern operating system, however, not all implementations are born equal. Today we'll talk about TPM, BitLocker, Windows full disk encryption and how to steal the key to the kingdom. This study is a hands-on approach to the excellent research [Sniff, there leaks my BitLocker key](https://labs.withsecure.com/publications/sniff-there-leaks-my-bitlocker-key) by Henri Nurmi, hope you enjoy.
 
 Before jumping to the fun part, let's see a little about BitLocker and TPM.
 
